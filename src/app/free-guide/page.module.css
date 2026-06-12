@@ -1,0 +1,57 @@
+/* ============ HERO ============ */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 72px;
+  align-items: center;
+  padding: 88px 0 100px;
+}
+.hero h1 { font-size: clamp(46px, 6vw, 86px); line-height: .99; margin-top: 22px; }
+.sub { font-size: 20px; color: var(--ink-soft); max-width: 520px; margin: 28px 0 30px; }
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  letter-spacing: .04em;
+}
+.m { display: inline-flex; align-items: center; gap: 9px; }
+.m i { color: var(--forest); font-size: 17px; }
+.dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cream-2); }
+
+.heroMedia :global(.ph-img) { aspect-ratio: 3 / 4; }
+.heroCap {
+  margin-top: 16px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ============ ABOUT ============ */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 72px;
+  align-items: center;
+}
+.aboutMedia :global(.ph-img) { aspect-ratio: 5 / 4.3; }
+.aboutGrid h2 { font-size: clamp(34px, 4vw, 54px); margin: 14px 0 22px; }
+.aboutGrid p { color: var(--ink-soft); font-size: 18px; margin-bottom: 16px; max-width: 520px; }
+.sig { font-family: var(--display); color: var(--forest); font-size: 26px; margin-top: 10px; }
+
+/* ============ MINI CTA ============ */
+.minicta h2 { font-size: clamp(34px, 4.4vw, 60px); margin-top: 18px; }
+.minicta p { font-size: 19px; color: var(--ink-soft); margin: 20px 0 36px; }
+.captureCenter { margin: 0 auto; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 920px) {
+  .heroGrid, .aboutGrid { grid-template-columns: 1fr; gap: 48px; }
+  .heroMedia { order: -1; max-width: 340px; margin: 0 auto; }
+}

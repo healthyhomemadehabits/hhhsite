@@ -1,0 +1,84 @@
+/* ============ HERO ============ */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 72px;
+  align-items: center;
+  padding: 88px 0 100px;
+}
+.hero h1 { font-size: clamp(46px, 6vw, 88px); line-height: .99; margin-top: 22px; }
+.sub { font-size: 20px; color: var(--ink-soft); max-width: 520px; margin: 28px 0 36px; }
+.heroCta { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.guarantee { display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--ink-soft); letter-spacing: .03em; }
+.guarantee i { color: var(--forest); font-size: 17px; }
+.heroMedia { position: relative; }
+.heroMedia :global(.ph-img) { aspect-ratio: 3 / 3.8; }
+.heroCap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.heroCap .price { font-family: var(--display); font-size: 40px; color: var(--ink); line-height: 1; }
+.heroCap .pages { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* ============ PAIN ============ */
+.painCols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 48px;
+  row-gap: 44px;
+}
+.painCard { border-top: 2px solid var(--blush-deep); padding-top: 30px; }
+.painCard .ic { font-size: 30px; color: var(--blush-deep); display: block; margin-bottom: 20px; line-height: 1; }
+.painCard p { color: var(--ink); font-size: 18px; line-height: 1.5; }
+
+/* ============ TRANSFORMATION ============ */
+.inner { max-width: 820px; margin: 0 auto; text-align: center; }
+.inner h2 { font-size: clamp(36px, 4.6vw, 62px); margin: 16px 0 28px; line-height: 1.02; }
+.inner p { font-size: 21px; color: var(--ink-soft); line-height: 1.6; }
+.leadLine { color: var(--ink); }
+
+/* ============ BIO ============ */
+.bioGrid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+}
+.bioMedia :global(.ph-img) { aspect-ratio: 5 / 4.4; }
+.bioGrid h2 { font-size: clamp(34px, 4vw, 54px); margin: 14px 0 22px; }
+.bioGrid p { color: var(--ink-soft); font-size: 18px; margin-bottom: 16px; max-width: 520px; }
+.sig { font-family: var(--display); color: var(--forest); font-size: 26px; margin-top: 10px; }
+
+/* ============ FINAL CTA ============ */
+.final h2 { margin-top: 18px; }
+.priceline {
+  font-family: var(--display);
+  font-size: 48px;
+  color: var(--ink);
+  margin: 22px 0 6px;
+  line-height: 1;
+}
+.priceline small {
+  font-family: var(--sans);
+  font-size: 14px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 920px) {
+  .heroGrid, .bioGrid { grid-template-columns: 1fr; gap: 48px; }
+  .heroMedia { order: -1; max-width: 330px; margin: 0 auto; }
+  .painCols { grid-template-columns: 1fr; row-gap: 36px; }
+}
+
+@media (max-width: 680px) {
+  .heroGrid { padding: 52px 0 64px; }
+  .heroCta { flex-direction: column; align-items: stretch; }
+}
