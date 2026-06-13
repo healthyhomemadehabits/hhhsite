@@ -6,19 +6,24 @@ interface EmailCaptureFormProps {
   buttonLabel: string;
   placeholder?: string;
   className?: string;
+  onSubmit?: (email: string) => void;
 }
 
 export default function EmailCaptureForm({
   buttonLabel,
   placeholder = "Enter your email",
   className,
+  onSubmit,
 }: EmailCaptureFormProps) {
   const [email, setEmail] = useState("");
 
   return (
     <form
       className={["capture", className].filter(Boolean).join(" ")}
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit?.(email);
+      }}
     >
       <input
         type="email"

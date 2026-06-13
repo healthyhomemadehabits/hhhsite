@@ -200,6 +200,21 @@ img { max-width: 100%; display: block; }
 .kcard.a-sage { border-top-color: var(--sage-deep); }
 .kcard.a-sage .kic { color: var(--sage-deep); }
 
+/* ---------- Tag ---------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--forest);
+  background: var(--forest-light);
+  border: 1px solid var(--line);
+  padding: 7px 14px;
+}
+
 /* ---------- Framed block (set apart without fill) ---------- */
 .frame { border: 1px solid var(--forest); padding: 72px; }
 .cta-center { text-align: center; max-width: 760px; margin: 0 auto; }
