@@ -8,7 +8,8 @@ import styles from "./Header.module.css";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/quiz", label: "Take the Quiz" },
-  { href: "/grocery-guide", label: "The Guide" },
+  { href: "/eat-real-guide", label: "Eat Real Guide" },
+  { href: "/grocery-guide", label: "Grocery Guide" },
   { href: "/free-guide", label: "Free Resource" },
   { href: "/#about", label: "About" },
 ];
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const isGroceryGuide = pathname === "/grocery-guide";
+  const isEatRealGuide = pathname === "/eat-real-guide";
 
   return (
     <header className={styles.nav}>
@@ -45,6 +47,10 @@ export default function Header() {
           {isGroceryGuide ? (
             <a href="#buy" className="btn btn-primary">
               Get the Guide — $37
+            </a>
+          ) : isEatRealGuide ? (
+            <a href="#buy" className="btn btn-primary">
+              Get the Guide — $17
             </a>
           ) : (
             <Link href="/free-guide" className="btn btn-primary">
