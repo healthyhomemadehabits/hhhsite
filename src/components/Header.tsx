@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
@@ -20,7 +21,13 @@ export default function Header() {
     <header className={styles.nav}>
       <div className={`wrap ${styles.navInner}`}>
         <Link href="/" className={styles.brand}>
-          <i className="ph ph-plant" />
+          <Image
+            src="/small-circle-logo.svg"
+            alt=""
+            width={38}
+            height={38}
+            unoptimized
+          />
           Healthy Homemade Habits
         </Link>
         <nav className={styles.navLinks}>

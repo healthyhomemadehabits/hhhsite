@@ -38,7 +38,7 @@ export default function Home() {
             </h1>
             <p className={styles.sub}>
               We help everyday people cut ultra-processed food out of their
-              diet — without giving up everything they love. Practical,
+              diet - without giving up everything they love. Practical,
               honest, Midwest-made.
             </p>
             <div className={styles.heroCta}>

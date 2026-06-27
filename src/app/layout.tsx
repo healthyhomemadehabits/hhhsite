@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   title: "Healthy Homemade Habits — Real Food. Real Life. 80/20.",
   description:
     "Real food, real life, 80/20. A Midwest couple teaching honest, un-fussy real-food habits.",
+  icons: {
+    icon: "/small-circle-logo_w-bg.svg",
+    apple: "/small-circle-logo_png.png",
+  },
 };
 
 export default function RootLayout({

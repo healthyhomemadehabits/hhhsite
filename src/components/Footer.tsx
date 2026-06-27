@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -7,7 +8,13 @@ export default function Footer() {
       <div className={`wrap ${styles.footTop}`}>
         <div>
           <div className={styles.footBrand}>
-            <i className="ph ph-plant" />
+            <Image
+              src="/small-circle-logo.svg"
+              alt=""
+              width={40}
+              height={40}
+              unoptimized
+            />
             Healthy Homemade Habits
           </div>
           <p className={styles.footTag}>

@@ -4,7 +4,7 @@
   grid-template-columns: 1.08fr .92fr;
   gap: 72px;
   align-items: center;
-  padding: 88px 0 100px;
+  padding: 48px 20px 104px;
 }
 .hero h1 { font-size: clamp(46px, 6vw, 86px); line-height: .99; margin-top: 22px; }
 .sub { font-size: 20px; color: var(--ink-soft); max-width: 520px; margin: 28px 0 30px; }
@@ -54,4 +54,8 @@
 @media (max-width: 920px) {
   .heroGrid, .aboutGrid { grid-template-columns: 1fr; gap: 48px; }
   .heroMedia { order: -1; max-width: 340px; margin: 0 auto; }
+}
+
+@media (max-width: 680px) {
+  .heroGrid { padding: 56px 0 64px; }
 }

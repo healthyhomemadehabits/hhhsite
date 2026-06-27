@@ -2,9 +2,9 @@
 .heroGrid {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
-  gap: 72px;
+  gap: 8rem;
   align-items: center;
-  padding: 96px 0 104px;
+  padding: 48px 20px 104px;
 }
 .hero h1 { font-size: clamp(48px, 5.9vw, 84px); line-height: 1.05; }
 .sub {
