@@ -1,0 +1,60 @@
+.page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.iconWrap {
+  margin-bottom: 28px;
+}
+
+.icon {
+  font-size: 52px;
+  color: var(--forest);
+  display: block;
+  line-height: 1;
+}
+
+.headline {
+  font-size: clamp(38px, 5.5vw, 72px);
+  line-height: 1;
+  margin: 14px 0 10px;
+}
+
+.product {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+
+.description {
+  font-size: 20px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.formWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.formWrap :global(.capture) {
+  width: 100%;
+}
+
+@media (max-width: 680px) {
+  .page { padding: 72px 0; }
+}

@@ -33,7 +33,9 @@
   row-gap: 44px;
 }
 .painCard { border-top: 2px solid var(--blush-deep); padding-top: 30px; }
-.painCard .ic { font-size: 30px; color: var(--blush-deep); display: block; margin-bottom: 20px; line-height: 1; }
+.painHead { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.painCard .ic { font-size: 30px; color: var(--blush-deep); line-height: 1; flex-shrink: 0; }
+.painCard h3 { margin: 0; }
 .painCard p { color: var(--ink); font-size: 18px; line-height: 1.5; }
 
 /* ============ TRANSFORMATION ============ */

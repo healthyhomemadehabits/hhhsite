@@ -38,6 +38,7 @@ export default function Faq({ items }: { items: FaqItem[] }) {
           </div>
         );
       })}
+      <p><small>*Timm and I aren't nutritionists, dieticians, or medical professionals in any way, shape or form. Everything we're talking about is based on our own experiences and research. Please consult your doctor before making any changes to your diet to see if it's right for you.</small></p>
     </div>
   );
 }

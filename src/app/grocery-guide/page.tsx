@@ -4,76 +4,114 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "The Grocery Guide — $37 | Healthy Homemade Habits",
+  title: "The Perfect Grocery List — $47 | Healthy Homemade Habits",
   description:
-    "A 100+ page done-for-you system for reading labels, cutting ultra-processed food, and shopping with real confidence — no diet culture, no guilt, no guesswork.",
+    "We all have to grocery shop, so why not make it easier, healthier, and more enjoyable? Timm and I help you organize your shopping trip, so that you can shop smarter, eat healthier, and create better habits, one cart at a time!",
 };
 
 const features = [
   {
     icon: "ph-magnifying-glass",
     accent: "a-forest",
-    title: "Label Reading, Decoded",
+    title: "Crafting your ideal 80/20 diet plan",
     description:
-      "Exactly what to look for, what to ignore, and the red-flag words that signal UPFs.",
+      "Make an eating plan that works for you, your schedule, and your personal goals, while still enjoying your favorite foods.",
   },
   {
     icon: "ph-prohibit",
     accent: "a-blush",
-    title: "UPF Identification",
+    title: "Understanding retail psychology, so you can avoid the store's UPF traps",
     description:
-      "Spot ultra-processed ingredients fast — without memorizing a chemistry textbook.",
+      "Use your knowledge to beat the system and be a smarter shopper",
   },
   {
     icon: "ph-storefront",
     accent: "a-sky",
-    title: "Retail Psychology",
+    title: "Implementing The Perfect List in real time, at a real grocery store",
     description:
-      "How stores are designed to nudge you — and how to walk the aisles on your terms.",
+      "Master ingredient label reading, decoding UPFs, and recognizing the red flags, so you can shop quickly, efficiently, and healthfully every single trip.",
   },
   {
     icon: "ph-list-checks",
     accent: "a-sage",
-    title: "Done-for-You Grocery List",
+    title: "Creating a menu of healthy meals that you actually want to eat",
     description:
-      "A real-food shopping list you can use this week — no blank-page panic.",
+      "Plan a week's worth of breakfasts, lunches, and dinners in advance, and shop for them efficiently",
   },
   {
     icon: "ph-fork-knife",
     accent: "a-forest",
-    title: "Meal Planning Starter",
+    title: "Finding delicious, healthy, and fun recipes across the internet",
     description:
-      "A simple framework to turn your cart into easy, repeatable weeknight meals.",
+      "We give you all of our favorite recipes and recipe sources, so you can start eating healthy right away!",
   },
   {
     icon: "ph-scales",
     accent: "a-blush",
-    title: "The 80/20 Framework",
+    title: "Our Perfect Grocery List System",
     description:
-      "The realistic method that keeps real food sustainable — and keeps the foods you love.",
+      "We've included a done-for-you menu and list, so you can start shopping efficiently today! Other materials include 4 blank grocery lists, 4 blank weekly menus, easy to read UPF lists to use on-the-go, our top recommendations for not-from-scratch foods, and further reading resources!",
+  },
+];
+
+const painPoints = [
+  {
+    icon: "ph-warning-circle",
+    title: "Grocery shopping shouldn't feel like a chore.",
+    text: "Walking in with a plan and a positive mindset changes everything, and saves you time and stress! (Also, just think about all the yummy food you're about to buy!",
+  },
+  {
+    icon: "ph-question",
+    title: "Does it pass the UPF Test?",
+    text: "Understanding labels and packaging claims keeps you from making choices against your best interest!",
+  },
+  {
+    icon: "ph-receipt",
+    title: "Wait, I spent how much??",
+    text: "Resisting impulse purchases, marketing traps, and analysis paralysis keeps you on budget!",
   },
 ];
 
 const faqItems = [
   {
-    question: "Is this a diet?",
+    question: "How is this different than buying a grocery list template on Etsy?",
     answer:
-      'Not even close. There’s no calorie counting, no meal restrictions, and no rules about what you "can’t" have. It’s about understanding real food and shopping with confidence — the 80/20 way.',
+      "The Perfect Grocery List isn't just a grocery list template, but a simple system for getting you organized before you get to the store. Many shopping list templates overcomplicate things by including superfluous charts and trackers that have nothing to do with grocery shopping. The Perfect Grocery List is simple and straightforward, but effective, because it was designed by practical shoppers who hate to faff around.",
   },
   {
-    question: "Do I have to give up all my favorite foods?",
+    question: "Is it just templates?",
     answer:
-      "Nope. The whole point of 80/20 is that you keep the foods you love. We just help you make better default choices most of the time, so the rest doesn't have to be a big deal.",
+      "No, it's so much more than that! In our opinion, knowledge is power, so to be a smart shopper, it's important to know a little background information about grocery shopping. We've done the research on the tips, tricks, and traps of the grocery store, so you can get in and out quicker, on budget, and without the usual hassle associated with shopping. We also teach you how to read ingredients labels, how to spot UPF red flags, and how to organize yourself for sustainable results.",
   },
   {
-    question: "Is this for beginners?",
+    question: "Do I have to follow a certain diet to use The Perfect Grocery List? How about a certain budget?",
     answer:
-      "Absolutely. It's written for real people starting from scratch — plain language, no jargon, and a clear first step. If you've never read an ingredient label in your life, you're exactly who this is for.",
+      "Not at all! This list is inclusive of all diets and grocery budgets. In fact, this list system will help you better judge how much you're spending on each trip because of the way it's laid out. As for specific diets, this list (in conjunction with the included menu planner) helps you keep track of what you're buying better than a traditional list, so you're sure to never forget a crucial ingredient for a recipe/dietary requirement.",
   },
   {
-    question: "How do I get it after I buy?",
+    question: "I'm not an organized person, and I hate making lists. Is this for me?",
     answer:
-      "It's a digital download — delivered to your inbox right after purchase. One-time payment, yours forever, read it on any device.",
+      "Absolutely! In fact, The Perfect Grocery List is perfect for you, because it's been designed in a way that basically organizes itself for you. All you need to do is choose some recipes/meals (we've recommended our favorites!), fill out the needed ingredients in the provided columns, and get shopping! It's even more simple than writing a list on the back of a piece of mail.",
+  },
+  {
+    question: "I'm only one person, making meals for myself. Will this system work for me?",
+    answer:
+      "Absolutely! The Perfect Grocery List was made to organize shopping for households of all sizes, whether you're shopping just for yourself, for a shared dorm situation, for a couple, or for a family of ten!",
+  },
+  {
+    question: "I'm shopping for my spouse and I, plus our two young kids. Will this system work for us?",
+    answer:
+      "Yes! The Perfect Grocery List was made to organize shopping for households of all sizes, whether you're shopping for a small family, a growing family, or a large and extended family!",
+  },
+  {
+    question: "I prefer to shop online rather than in the store. Can I use this system?",
+    answer:
+      "Definitely! The Perfect Grocery list works in person, but is also ideal for organizing your online shopping. Because the grocery list and meal planner work hand-in-hand, grocery shopping online becomes even easier when you have a column-style plan in front of you. We dedicated a section in Chapter 4 to how to use our list for shopping online.",
+  },
+  {
+    question: "How will I receive my copy of The Perfect Grocery List?",
+    answer:
+      "After purchasing, you'll have the option to click a \"download now\" button; the PDF will save directly to your device! We'll also send it in an email! This is an instant download that can be read on any device, any time.",
   },
 ];
 
@@ -84,20 +122,21 @@ export default function GroceryGuidePage() {
       <section className={styles.hero}>
         <div className={`wrap ${styles.heroGrid}`}>
           <div>
-            <span className="eyebrow">The Grocery Guide</span>
-            <h1>Grocery Shopping Is Where Healthy Eating Actually Starts</h1>
+            <span className="eyebrow">The Perfect Grocery List</span>
+            <h1>Healthy Grocery Shopping Starts With The Perfect List</h1>
             <p className={styles.sub}>
-              A 100+ page done-for-you system for reading labels, cutting
-              ultra-processed food, and shopping with real confidence — no
-              diet culture, no guilt, no guesswork.
+              We all have to grocery shop, so why not make it easier, healthier, and more enjoyable? Timm and I help you organize your shopping trip, so that you can shop smarter, eat healthier, and create better habits, one cart at a time!
+            </p>
+            <p className={styles.sub}>
+              Ever wonder why the grocery stores seem to be filled with bad-for-you food? Or why, even if you go in for 1 item, you can never leave without less than 10? What ever happened to the good old days of knowledgeable butchers and mountains of fresh produce? Don't the stores want you to make healthy choices? This guide answers all those questions, and so much more! Join us as we uncover all of the tricks, traps, and truths of retail psychology, and how you can use that knowledge to become a better, healthier shopper!
             </p>
             <div className={styles.heroCta}>
-              <a href="#buy" className="btn btn-primary lg">
-                Get the Guide — $37
+              <a href="/grocery-guide/waitlist" className="btn btn-primary lg">
+                Get the Guide - $47
               </a>
               <span className={styles.guarantee}>
                 <i className="ph ph-shield-check" />
-                One-time purchase · Yours forever
+                Instant Download
               </span>
             </div>
           </div>
@@ -108,8 +147,8 @@ export default function GroceryGuidePage() {
               label="cover — Grocery Guide"
             />
             <div className={styles.heroCap}>
-              <span className={styles.price}>$37</span>
-              <span className={styles.pages}>100+ pages · instant download</span>
+              <span className={styles.price}>$47</span>
+              <span className={styles.pages}>Download now</span>
             </div>
           </div>
         </div>
@@ -119,31 +158,19 @@ export default function GroceryGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">Sound familiar?</span>
-            <h2>The grocery store shouldn&apos;t feel like a trap</h2>
+            <span className="eyebrow">Does this sound like you?</span>
+            <h2>&quot;I hate grocery shopping! Why can&apos;t it be easier, quicker, cheaper, healthier, more fun?!&quot;</h2>
           </div>
           <div className={styles.painCols}>
-            <div className={styles.painCard}>
-              <i className={`ph ph-warning-circle ${styles.ic}`} />
-              <p>
-                You want to eat better, but the grocery store feels like a
-                minefield of confusing claims.
-              </p>
-            </div>
-            <div className={styles.painCard}>
-              <i className={`ph ph-question ${styles.ic}`} />
-              <p>
-                You can&apos;t always tell what&apos;s actually healthy versus
-                what&apos;s just marketed that way.
-              </p>
-            </div>
-            <div className={styles.painCard}>
-              <i className={`ph ph-receipt ${styles.ic}`} />
-              <p>
-                Every week you overspend — and still walk out feeling like you
-                made the wrong choices.
-              </p>
-            </div>
+            {painPoints.map((point) => (
+              <div key={point.text} className={styles.painCard}>
+                <div className={styles.painHead}>
+                  <i className={`ph ${point.icon} ${styles.ic}`} />
+                  <h3>{point.title}</h3>
+                </div>
+                <p>{point.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -153,10 +180,9 @@ export default function GroceryGuidePage() {
         <div className="wrap">
           <div className="head-center">
             <span className="eyebrow">What&apos;s inside</span>
-            <h2>Everything you need to shop with confidence</h2>
+            <h2>Having The Perfect Grocery List makes shopping simple!</h2>
             <p className="lead">
-              Six practical sections that turn the grocery store from
-              overwhelming to easy.
+              In 5 easy to digest chapters, you&apos;ll be at pro at:
             </p>
           </div>
           <div className="kgrid cols-3">
@@ -174,17 +200,13 @@ export default function GroceryGuidePage() {
       {/* ============ TRANSFORMATION ============ */}
       <section className="section line">
         <div className={`wrap ${styles.inner}`}>
-          <span className="eyebrow">Life after the guide</span>
-          <h2>Imagine walking in calm and walking out sure</h2>
+          <span className="eyebrow">Life with the guide</span>
+          <h2>Wouldn't it be great to just get in and out of the store without stressing, and actually leave with everything you need?</h2>
           <p>
             <span className={styles.leadLine}>
-              No more standing frozen in the cereal aisle.
+              Now it's possible with The Perfect Grocery List
             </span>{" "}
-            You read a label in seconds, skip the marketing traps, and fill
-            your cart with real food you actually feel good about. No guilt,
-            no impulse buys, no overspending — just quiet confidence and the
-            knowledge that you know exactly what you&apos;re buying and why.
-            That&apos;s not a diet. That&apos;s just how you shop now.
+            This simple system has been the only thing we&apos;ve used for the last 6 years, and we&apos;d never dream of going back to the old way! Shop quickly, shop with focus, and never forget an item again.
           </p>
         </div>
       </section>
@@ -199,14 +221,10 @@ export default function GroceryGuidePage() {
             />
           </div>
           <div>
-            <span className="eyebrow">Who&apos;s behind it</span>
+            <span className="eyebrow">A Tale of Two Shoppers</span>
             <h2>We learned this the hard way so you don&apos;t have to.</h2>
             <p>
-              We&apos;re Hana &amp; Timm — a Midwest couple who got tired of
-              feeling confused, manipulated, and broke at the grocery store.
-              So we spent years learning real food, ultra-processed
-              ingredients, and what it actually takes to eat well without
-              making it our whole personality.
+              We&apos;re Hana and Timm, a couple of starry eyed grocery shoppers, supermarket tourists, and GGG stockist wannabes. (IYKYK) We&apos;ve studied the Grocery Store in search of a simpler way to shop, and we&apos;ve cracked the code! If you&apos;ve ever wished someone could just do your grocery shopping for you, try The Perfect Grocery List! It&apos;s the next best thing!
             </p>
             <p>
               This guide is all of it, organized and done-for-you. Everything
@@ -221,8 +239,8 @@ export default function GroceryGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">Good questions</span>
-            <h2>Before you grab it</h2>
+            <span className="eyebrow">In Case You Were Wondering</span>
+            <h2>Frequently Asked Questions</h2>
           </div>
           <Faq items={faqItems} />
         </div>
@@ -232,22 +250,22 @@ export default function GroceryGuidePage() {
       <section className="section line" id="buy">
         <div className="wrap">
           <div className={`frame cta-center ${styles.final}`}>
-            <span className="eyebrow">Take back your cart</span>
-            <h2>Ready to take back control of your cart?</h2>
+            <span className="eyebrow">Ready for the easiest shopping trip of your life?</span>
+            <h2>Download your copy of The Perfect Grocery List and shop smarter today!</h2>
             <p className="lead" style={{ marginTop: "20px" }}>
-              Stop guessing at the grocery store. Get the whole system today.
+              Take back control in the grocery store. Start using The Perfect Grocery List today!
             </p>
             <div className={styles.priceline}>
-              $37 <small>One-time · yours forever</small>
+              $47 <small>Instant Download</small>
             </div>
             <div style={{ marginTop: "26px" }}>
-              <a href="#" className="btn btn-primary lg">
-                Get the Grocery Guide
+              <a href="/grocery-guide/waitlist" className="btn btn-primary lg">
+                Get The Perfect Grocery List
               </a>
             </div>
             <p className="fineprint" style={{ justifyContent: "center" }}>
               <i className="ph ph-files" />
-              100+ pages · instant digital download
+              instant PDF download
             </p>
           </div>
         </div>

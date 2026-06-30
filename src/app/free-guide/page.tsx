@@ -9,6 +9,30 @@ export const metadata: Metadata = {
     "A warm, no-pressure starter guide to understanding real food and taking your very first step — the 80/20 way. Made by a Midwest couple who've been exactly where you are.",
 };
 
+const benefits = [
+  {
+    icon: "ph-magnifying-glass",
+    accent: "a-forest",
+    title: "Understand What UPFs Actually Are",
+    description:
+      "No fear, no jargon — just a clear, plain-language look at ultra-processed food and why it matters.",
+  },
+  {
+    icon: "ph-scales",
+    accent: "a-sky",
+    title: "Learn the 80/20 Method",
+    description:
+      "The realistic framework that makes room for real life — and the foods you genuinely love.",
+  },
+  {
+    icon: "ph-footprints",
+    accent: "a-blush",
+    title: "Take Your First Step — No Perfection Required",
+    description:
+      "One small, doable change to start today. Progress over perfection, always.",
+  },
+];
+
 export default function FreeGuidePage() {
   return (
     <>
@@ -67,33 +91,13 @@ export default function FreeGuidePage() {
             <h2>Three simple things you&apos;ll walk away with</h2>
           </div>
           <div className="kgrid cols-3">
-            <div className="kcard a-forest">
-              <span className="knum">01</span>
-              <i className="ph ph-magnifying-glass kic" />
-              <h3>Understand What UPFs Actually Are</h3>
-              <p>
-                No fear, no jargon — just a clear, plain-language look at
-                ultra-processed food and why it matters.
-              </p>
-            </div>
-            <div className="kcard a-sky">
-              <span className="knum">02</span>
-              <i className="ph ph-scales kic" />
-              <h3>Learn the 80/20 Method</h3>
-              <p>
-                The realistic framework that makes room for real life — and
-                the foods you genuinely love.
-              </p>
-            </div>
-            <div className="kcard a-blush">
-              <span className="knum">03</span>
-              <i className="ph ph-footprints kic" />
-              <h3>Take Your First Step — No Perfection Required</h3>
-              <p>
-                One small, doable change to start today. Progress over
-                perfection, always.
-              </p>
-            </div>
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className={`kcard ${benefit.accent}`}>
+                <i className={`ph ${benefit.icon} kic`} />
+                <h3>{benefit.title}</h3>
+                <p>{benefit.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

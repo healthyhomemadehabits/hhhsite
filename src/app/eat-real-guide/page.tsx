@@ -4,7 +4,7 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Eat Real, Live Better — $17 | Healthy Homemade Habits",
+  title: "Eat Real, Live Better - $17 | Healthy Homemade Habits",
   description:
     "A practical guide to reading grocery labels, navigating every aisle with confidence, and finally understanding what ultra-processed food actually is — and how to avoid it.",
 };
@@ -54,26 +54,49 @@ const features = [
   },
 ];
 
+const painPoints = [
+  {
+    icon: "ph-warning-circle",
+    title: "xxxxx",
+    text: "How to balance what you eat, using the 80/20 Method. Eat healthy, wholesome food, but also the foods you love!",
+  },
+  {
+    icon: "ph-question",
+    title: "xxxxx",
+    text: "What actually IS an Ultra Processed Food, and what are the easiest ways to spot them? Learn how to read an ingredients label like a pro! Understand the financial advantage of from-scratch cooking over convenience cooking.",
+  },
+  {
+    icon: "ph-smiley-nervous",
+    title: "xxxxx",
+    text: "Our favorite healthy recipes from across the internet, so you can start cooking healthy today!",
+  },
+];
+
 const faqItems = [
   {
-    question: "How is this different from the Grocery Guide?",
+    question: "Is this a diet?",
     answer:
-      "Eat Real, Live Better focuses on the foundation — understanding UPFs, reading labels, and building awareness. The Grocery Guide ($37) goes further with a full done-for-you system: grocery lists, meal planning, and aisle-by-aisle shopping strategy. Think of this as the starting point and that as the full playbook.",
+      "In a way, yes, but more than that, 80/20 is a way of life. Unlike traditional diets, that require you to eat certain foods, give up other foods, and count your calories, the 80/20 method is much more flexible. The focus is on balancing your diet in a way that you're mostly eating real food, and eating smaller amounts of food that we call “indulgences”.",
   },
   {
-    question: "I don't know anything about real food — is this for me?",
+    question: "So, are you saying that I don't have to give up my favorite foods??",
     answer:
-      "Yes, this is exactly for you. It's written for people starting from zero, in plain language with no jargon. If you've never read an ingredient label or wondered what 'ultra-processed' actually means, this is your starting point.",
+      "Right! The 80/20 method is built in a way that, for 20% of the week, you can relax a little and enjoy some… less-than-healthy foods… without guilt, or feeling like you “slipped up”. Life is about balance, and if you mostly eat fresh, nutrient rich foods, a little bit of a fun treat won't erase all that good work.*",
   },
   {
-    question: "Do I have to stop eating foods I love?",
+    question: "I've never dieted before, so I'm nervous, but I know I want to eat healthier. Is this for me?",
     answer:
-      "No. The 80/20 approach means you keep the foods you love — you just make better default choices most of the time. The goal is awareness and confidence, not restriction.",
+      "Yes! The 80/20 method is for anyone who wants to ease into eating healthier, and sustainably keep eating healthier throughout life. Because the method is flexible, you're able to choose the foods you eat, just with the understanding that 80% of the time, you're making healthy choices, and 20% of the time, you're making the choice to indulge a bit.",
   },
   {
-    question: "How do I get it after I buy?",
+    question: "When can I expect to see results?",
     answer:
-      "It's a digital download delivered to your inbox right after purchase. One-time payment, yours forever, read it on any device.",
+      "It really depends. This is a marathon, not a sprint, and if you start putting the work in to cut down on UPFs and balance your diet 80% fresh and wholesome with 20% indulgences, I think you'll start to see and feel benefits pretty quickly. However, this is more of a long-term eating method, with benefits and results that cumulate over time, rather than a quick-fix. Just keep at it, and you'll be surprised how good you feel!",
+  },
+  {
+    question: "How will I receive my PDF?",
+    answer:
+      "After purchasing, you'll have the option to click a “download now” button; the PDF will save directly to your device! We'll also send it in an email! This is an instant download that can be read on any device, any time.",
   },
 ];
 
@@ -85,19 +108,20 @@ export default function EatRealGuidePage() {
         <div className={`wrap ${styles.heroGrid}`}>
           <div>
             <span className="eyebrow">Eat Real, Live Better</span>
-            <h1>Finally Know What You&apos;re Actually Eating</h1>
+            <h1>Stop Eating Ultra Processed Food (Without Giving Up Everything You Love)</h1>
             <p className={styles.sub}>
-              A practical guide to reading grocery labels, navigating every
-              aisle with confidence, and cutting ultra-processed food —
-              without giving up the foods you love.
+              We all want to eat healthier and live longer, right, but restrictive diets and total lifestyle overhauls leave us sad, hungry, and craving the exact foods we know we shouldn&apos;t eat. We&apos;ve cracked the code on traditional diets, and want to share with you a new kind of diet: a diet of balance and joy.
+            </p>
+            <p className={styles.sub}>
+              
             </p>
             <div className={styles.heroCta}>
               <a href="#buy" className="btn btn-primary lg">
                 Get the Guide — $17
               </a>
               <span className={styles.guarantee}>
-                <i className="ph ph-shield-check" />
-                One-time purchase · Yours forever
+                <i className="ph ph-watch" />
+                Instant download. Start reading today.
               </span>
             </div>
           </div>
@@ -109,7 +133,7 @@ export default function EatRealGuidePage() {
             />
             <div className={styles.heroCap}>
               <span className={styles.price}>$17</span>
-              <span className={styles.pages}>instant digital download</span>
+              <span className={styles.pages}>Get the PDF right now</span>
             </div>
           </div>
         </div>
@@ -119,33 +143,19 @@ export default function EatRealGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">Sound familiar?</span>
-            <h2>You want to eat better — but it&apos;s hard to know what&apos;s real</h2>
+            <span className="eyebrow">Feeling stuck in a rut?</span>
+            <h2>Eat Real, Live Better: How to Begin Eating Real Food Without Giving Up Everything You Love</h2>
           </div>
           <div className={styles.painCols}>
-            <div className={styles.painCard}>
-              <i className={`ph ph-warning-circle ${styles.ic}`} />
-              <p>
-                You turn over a package and the ingredient list reads like a
-                chemistry exam. You put it back — or just give up and grab it
-                anyway.
-              </p>
-            </div>
-            <div className={styles.painCard}>
-              <i className={`ph ph-question ${styles.ic}`} />
-              <p>
-                &ldquo;Natural,&rdquo; &ldquo;wholesome,&rdquo; &ldquo;made with real ingredients.&rdquo; You
-                can&apos;t tell what&apos;s actually healthy versus what&apos;s just well
-                marketed.
-              </p>
-            </div>
-            <div className={styles.painCard}>
-              <i className={`ph ph-smiley-nervous ${styles.ic}`} />
-              <p>
-                You&apos;ve tried to eat cleaner before, but it felt overwhelming.
-                Nobody gave you a clear, simple starting point.
-              </p>
-            </div>
+            {painPoints.map((point) => (
+              <div key={point.text} className={styles.painCard}>
+                <div className={styles.painHead}>
+                  <i className={`ph ${point.icon} ${styles.ic}`} />
+                  <h3>{point.title}</h3>
+                </div>
+                <p>{point.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -201,16 +211,13 @@ export default function EatRealGuidePage() {
             />
           </div>
           <div>
-            <span className="eyebrow">Who made this</span>
+            <span className="eyebrow">From us to you</span>
             <h2>We figured it out so you don&apos;t have to start from scratch.</h2>
             <p>
-              We&apos;re Hana &amp; Timm — a Midwest couple who spent years learning
-              what ultra-processed food actually is, how to spot it, and how to
-              build a real-food life without turning it into a full-time job.
+              We&apos;re Hana &amp; Timm, lovers of fresh salads, perfectly seared steaks (cast iron, not grilled!), gooey homemade brownies, and strong black coffee. In 2020, we made the switch away from Ultra Processed Foods, and our lives changed for the better in so many ways! If you&apos;ve been working to eat healthier, but need a bit of guidance, we&apos;re the un-fussy foodie friends you&apos;ve been looking for! 
             </p>
             <p>
-              This guide is what we wish we&apos;d had on day one. The clear, honest
-              starting point nobody gave us.
+              This guide is what we wish we&apos;d had on day one. It&apos;s a collection of all the things we learned the long way!
             </p>
             <p className={styles.sig}>Hana &amp; Timm</p>
           </div>
@@ -221,8 +228,8 @@ export default function EatRealGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">Good questions</span>
-            <h2>Before you grab it</h2>
+            <span className="eyebrow">In case you were wondering</span>
+            <h2>Frequently Asked Questions</h2>
           </div>
           <Faq items={faqItems} />
         </div>
@@ -232,10 +239,10 @@ export default function EatRealGuidePage() {
       <section className="section line" id="buy">
         <div className="wrap">
           <div className={`frame cta-center ${styles.final}`}>
-            <span className="eyebrow">Start here</span>
-            <h2>Your real food life starts with knowing what&apos;s real.</h2>
+            <span className="eyebrow">Download your copy</span>
+            <h2> Eat Real, Live Better: How to Begin Eating Real Food Without Giving Up Everything You Love</h2>
             <p className="lead" style={{ marginTop: "20px" }}>
-              Get the guide and walk into any grocery store with confidence.
+              Start building healthy habits today!
             </p>
             <div className={styles.priceline}>
               $17 <small>One-time · yours forever</small>
