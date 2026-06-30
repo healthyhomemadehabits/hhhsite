@@ -20,6 +20,7 @@ export default function EmailCaptureForm({
   return (
     <form
       className={["capture", className].filter(Boolean).join(" ")}
+      suppressHydrationWarning
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit?.(email);

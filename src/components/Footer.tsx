@@ -18,8 +18,7 @@ export default function Footer() {
             Healthy Homemade Habits
           </div>
           <p className={styles.footTag}>
-            Real food, real life, 80/20. A Midwest couple teaching honest,
-            un-fussy real-food habits.
+            Helping You Start Better Habits, One Grocery Trip At A Time
           </p>
         </div>
         <nav className={styles.footNav}>

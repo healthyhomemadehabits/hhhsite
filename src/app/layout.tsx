@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Script
           src="https://unpkg.com/@phosphor-icons/web@2.1.1"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
         <Header />
         {children}
