@@ -34,10 +34,10 @@ export default function Home() {
               <br />
               One Grocery Trip At A Time.
               <br />
-              <span className="accent">80/20.</span>
+              {/* <span className="accent">80/20.</span> */}
             </h1>
             <p className={styles.sub}>
-              Hey! We&apos;re Timm and Hana, the husband and wife team behind Healthy Homemade Habits! We love helping people like you cut Ultra Processed Foods out of your diet, and we do it without making you give up everything you love! Want to find out how? Check out the links below!
+              Hey! We&apos;re Hana and Timm, the husband and wife team behind Healthy Homemade Habits! We love helping people like you cut Ultra Processed Foods out of your diet, and we do it without making you give up everything you love! Want to find out how? Check out the links below!
             </p>
             <div className={styles.heroCta}>
               <Link href="/free-guide" className="btn btn-primary">
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="kgrid cols-3">
             <div className="kcard a-forest">
               <i className="ph ph-bowl-food kic" />
-              <h3>Food should nourish you, not confuse you.</h3>
+              <h3>Food should nourish you, not confuse you!</h3>
               <p>
                 Ingredient labels are straightforward, but the actual ingredients? Not always. We made a list of the most common Ultra Processed Ingredients you&apos;ll find in everyday foods, explain what they do in simple terms, and uncover what foods you&apos;ll find them in.
               </p>
@@ -144,7 +144,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <span className="eyebrow">Change the way you shop</span>
+            <span className="eyebrow">Eat Real, Live Better</span>
             <h2>Tired of traditional dieting, but seeing no results? Our approach is different.</h2>
             <p className={styles.lead}>
               Now that you know what common Ultra Processed ingredients are lurking in your favorite foods, are you ready to take the next step in cutting them out of your diet? If it sounds daunting, we make it easy for you! <span><b>Eat Real, Live Better: How to Begin Eating Real Food Without Giving Up Everything You Love </b></span>goes more in depth on why Ultra Processed Foods exist, why the grocery stores push them, and how to safeguard yourself against them with the 80/20 eating method. If you&apos;ve been wanting to eat healthier but need a little extra guidance, look no further than this PDF!
@@ -165,7 +165,7 @@ export default function Home() {
               <div className={styles.f}>
                 <i className="ph ph-article" />
                 <span>
-                  <b>How to read an ingredients label like a pro</b>
+                  <b>Read ingredient labels like a pro</b>
                 </span>
               </div>
               <div className={styles.f}>
@@ -189,8 +189,8 @@ export default function Home() {
               Get the Grocery Guide
             </Link>
             <p className="fineprint">
-              <i className="ph ph-infinity" />
-              100+ pages. One-time purchase. Yours forever.
+              <i className="ph ph-watch" />
+              Instant download. Start reading today.
             </p>
           </div>
         </div>
@@ -203,7 +203,7 @@ export default function Home() {
             <span className="eyebrow">The Perfect Grocery List</span>
             <h2>Tired of spending hours at the grocery store, and still always forgetting one thing?</h2>
             <p className={styles.lead}>
-              We all have to grocery shop, so why not make the experience more enjoyable?! Timm and I have developed a guide to make your shopping trips quicker, easier, and generally a more fun time. This guide helps you shop smarter, eat healthier, and create better habits one trip at a time!
+              We all have to grocery shop, so why not make the experience more enjoyable?! Timm and I have developed a guide to make your shopping trips quicker, easier, and actually fun! This guide helps you shop smarter, eat healthier, and create better habits one trip at a time!
             </p>
             <div className={styles.featureList}>
               <div className={styles.f}>
@@ -211,17 +211,20 @@ export default function Home() {
                 <span>
                   <b>Templates and instructions for The Perfect Grocery List </b> 
                   <ul>
-                    <li>+ 4 beautifully simple, blank Grocery Lists</li>
-                    <li>+ A weekly breakfast, lunch, and dinner menu to help you plan your meals ahead of time</li>
-                    <li>+ A price-per ounce calculator so you can easily choose the best value products and save money!</li>
+                    <li>+ 4 beautifully simple, blank grocery lists</li>
+                    <li>+ Blank weekly breakfast, lunch, and dinner menus to help you plan your meals ahead of time</li>
+                    <li>+ How to think in price-per ounce so you can easily choose the best value products and save money!</li>
                   </ul>
                 </span>
               </div>
               <div className={styles.f}>
                 <i className="ph ph-list-magnifying-glass" />
                 <span>
-                  <b>Behind the scenes </b> - a look at how grocery stores try to get you to buy more of the stuff you don&apos;t need. 
+                  <b>Behind the scenes </b>
                   <ul>
+                    <li>
+                      + A look at how grocery stores try to get you to buy more of the stuff you don&apos;t need.
+                    </li>
                     <li>
                       + Grocery stores use secret tactics to get you to buy Ultra Processed Foods. Have you fallen for them?!
                     </li>
@@ -241,7 +244,7 @@ export default function Home() {
                 </span>
               </div>
               <div className={styles.f}>
-                <i className="ph ph-info" />
+                <i className="ph ph-chef-hat" />
                 <span>
                   <b>14 of our favorite recipes </b> - get started with healthy cooking and eating this week!
                   <ul>
@@ -257,15 +260,15 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.priceRow}>
-              <span className={styles.price}>$37</span>
+              <span className={styles.price}>$47</span>
               <span className={styles.was}>Become a smarter shopper today!</span>
             </div>
             <Link href="/grocery-guide" className="btn btn-primary">
               Get the Grocery Guide
             </Link>
             <p className="fineprint">
-              <i className="ph ph-infinity" />
-              100+ pages. One-time purchase. Yours forever.
+              <i className="ph ph-hourglass-medium" />
+              Instant download. Start shopping smarter today!
             </p>
           </div>
           <div className={styles.productCover}>
@@ -307,7 +310,7 @@ export default function Home() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">On YouTube</span>
+            <span className="eyebrow">More free tips and tricks</span>
             <h2>We&apos;re on YouTube!</h2>
             <p className="lead">
               We post new videos every week about efficient grocery shopping, living the 80/20 life, and actual tasty swaps for Ultra Processed Foods!
@@ -344,7 +347,7 @@ export default function Home() {
           <div className="frame cta-center">
             <span className="eyebrow">One better choice</span>
             <h2 style={{ marginTop: "18px" }}>
-              Better choices lead to healthy habits. Healthy habits lead to a happier life.
+              Better choices lead to healthy habits.<br/> Healthy habits lead to a better life.
             </h2>
             <p className="lead" style={{ margin: "22px 0 36px" }}>
               Download The 5-Second Shopper to start your healthy habits today!
