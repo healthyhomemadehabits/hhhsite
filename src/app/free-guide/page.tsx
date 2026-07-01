@@ -6,30 +6,54 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Eat Real, Live Better — Free Guide | Healthy Homemade Habits",
   description:
-    "A warm, no-pressure starter guide to understanding real food and taking your very first step — the 80/20 way. Made by a Midwest couple who've been exactly where you are.",
+    "A warm, no-pressure starter guide to understanding real food and taking your very first step - the 80/20 way. Made by a Midwest couple who've been exactly where you are.",
 };
+
+const whatsInside = [
+  {
+    icon: "ph-list-checks",
+    accent: "a-sage",
+    title: "A list of over 125 Ultra Processed ingredients",
+    description:
+      "Listed in alphabetical order for quick scanning, color coded for quick understanding - fine to consume in moderation, limit consumption, and avoid entirely.",
+  },
+  {
+    icon: "ph-timer",
+    accent: "a-sky",
+    title: "A simple formula to gauge whether or not this food is worth being in your cart",
+    description:
+      "This is the simple, 5-second method we use to calculate whether or not we want to consume a packaged product.",
+  },
+  {
+    icon: "ph-storefront",
+    accent: "a-blush",
+    title: "Tried and true tips for navigating the grocery store",
+    description:
+      "The grocery store wants you to buy UPFs, but if you're committed to avoiding them, we teach you how to buy the most healthful ingredients possible!",
+  },
+];
 
 const benefits = [
   {
     icon: "ph-magnifying-glass",
     accent: "a-forest",
-    title: "Understand What UPFs Actually Are",
+    title: "You know “junk food” isn't good for you, but what makes some food junk, and some food not?",
     description:
-      "No fear, no jargon — just a clear, plain-language look at ultra-processed food and why it matters.",
+      "Ingredient labels are straightforward, but the ingredients… not so much. Find out what all those chemical sounding names really mean!",
   },
   {
     icon: "ph-scales",
     accent: "a-sky",
-    title: "Learn the 80/20 Method",
+    title: "You confidently pick up the “natural” looking packaging, especially the ones that say “full of fiber” or “super protein” or “Real healthy!”",
     description:
-      "The realistic framework that makes room for real life — and the foods you genuinely love.",
+      "Then you feel confused or discouraged when the ingredient list is as long as your arm, and full of ingredients you’ve never heard before.",
   },
   {
     icon: "ph-footprints",
     accent: "a-blush",
-    title: "Take Your First Step — No Perfection Required",
+    title: "You tried to eat clean before, but felt dissatisfied by the bland, boring, and overcomplicated recipes.",
     description:
-      "One small, doable change to start today. Progress over perfection, always.",
+      "Eating healthy doesn't mean giving up everything you love. It means balancing wholesome, nutritious foods with small, smartly chosen indulgences. Eating clean is simple when you know exactly what you're consuming.",
   },
 ];
 
@@ -42,18 +66,15 @@ export default function FreeGuidePage() {
           <div>
             <span className="eyebrow">Free digital guide</span>
             <h1>
-              Stop Eating Ultra-Processed Food Without Giving Up Everything
-              You Love
+              Identify Ultra Processed Foods in 5 Seconds with this handy list!
             </h1>
             <p className={styles.sub}>
-              A warm, no-pressure starter guide to understanding real food and
-              taking your very first step — the 80/20 way. Made by a Midwest
-              couple who&apos;ve been exactly where you are.
+              Tired of standing in the grocery aisles, trying to figure out if a packaged food is healthy or not? Maybe you've heard about Ultra Processed Foods, but you don't know what they are, or how to identify them, and especially how to avoid them. Or maybe you're aware that food dyes and artificial sweeteners are under scrutiny, but with so many chemical sounding names on the ingredients lists you're not sure which ones they are. The 5-Second Shopper answers all those questions for you, and so much more!
             </p>
             <div className={styles.metaRow}>
               <span className={styles.m}>
                 <i className="ph ph-clock" />
-                10-minute read
+                Quick reference guide
               </span>
               <span className={styles.dot} />
               <span className={styles.m}>
@@ -63,7 +84,7 @@ export default function FreeGuidePage() {
               <span className={styles.dot} />
               <span className={styles.m}>
                 <i className="ph ph-heart" />
-                No perfection required
+                Small steps toward better health
               </span>
             </div>
             <EmailCaptureForm buttonLabel="Send Me the Free Guide" />
@@ -87,8 +108,8 @@ export default function FreeGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">Inside the guide</span>
-            <h2>Three simple things you&apos;ll walk away with</h2>
+            <span className="eyebrow">Is this you?</span>
+            <h2>You really want to eat healthier, but it feels like everything in the store is against you.</h2>
           </div>
           <div className="kgrid cols-3">
             {benefits.map((benefit) => (
@@ -96,6 +117,25 @@ export default function FreeGuidePage() {
                 <i className={`ph ${benefit.icon} kic`} />
                 <h3>{benefit.title}</h3>
                 <p>{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ WHAT'S INSIDE ============ */}
+      <section className="section line" id="inside">
+        <div className="wrap">
+          <div className="head-center">
+            <span className="eyebrow">What&apos;s inside the free guide</span>
+            <h2>Start Eating Healthier Today</h2>
+          </div>
+          <div className="kgrid cols-3">
+            {whatsInside.map((item) => (
+              <div key={item.title} className={`kcard ${item.accent}`}>
+                <i className={`ph ${item.icon} kic`} />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </div>
             ))}
           </div>
@@ -112,16 +152,13 @@ export default function FreeGuidePage() {
             />
           </div>
           <div>
-            <span className="eyebrow">From us to you</span>
+            <span className="eyebrow">Our Story</span>
             <h2>We&apos;re Hana &amp; Timm.</h2>
             <p>
-              We&apos;re a Midwest couple who got tired of feeling confused
-              and manipulated at the grocery store — so we learned real food
-              the honest way and started sharing it.
+              We&apos;re health-conscious (but not health-nuts!) homecooks with a love of fresh, wholesome foods, and a little side of something fun. We&apos;ve been avoiding UPFs since 2020, and haven&apos;t missed them a bit! We&apos;ve learned a lot along the way about how to make satisfying swaps, how to make common UPFs with better ingredients from scratch, and how to spot the UPF red flags in the grocery store. We&apos;re excited to share our knowledge with you!
             </p>
             <p>
-              This little guide is the exact thing we wish someone had handed
-              us at the start. We&apos;re so glad you&apos;re here.
+              Ready to become a UPF super sleuth?
             </p>
             <p className={styles.sig}>Hana &amp; Timm</p>
           </div>
@@ -133,10 +170,9 @@ export default function FreeGuidePage() {
         <div className="wrap">
           <div className={`frame cta-center ${styles.minicta}`}>
             <span className="eyebrow">Ready when you are</span>
-            <h2>Grab your free copy of &ldquo;Eat Real, Live Better&rdquo;</h2>
+            <h2>Grab your free copy of &ldquo;The 5-Second Shopper!&rdquo;</h2>
             <p>
-              Drop your email and we&apos;ll send it straight to your inbox.
-              First step, taken.
+              Enter your email address, and we&apos;ll send it straight to your inbox!
             </p>
             <EmailCaptureForm
               buttonLabel="Send Me the Free Guide"
