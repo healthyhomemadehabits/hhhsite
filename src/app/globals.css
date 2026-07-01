@@ -180,7 +180,12 @@ img { max-width: 100%; display: block; }
   height: 58px;
 }
 .capture input::placeholder { color: var(--ink-soft); }
+.capture input:disabled { opacity: .5; cursor: not-allowed; }
 .capture .btn { height: 58px; border: none; }
+.capture .btn:disabled { opacity: .6; cursor: not-allowed; pointer-events: none; }
+.capture-success { display: flex; align-items: center; gap: 12px; color: var(--forest); font-size: 16px; font-weight: 600; padding: 16px 0; max-width: 520px; }
+.capture-success i { font-size: 22px; flex-shrink: 0; }
+.capture-error { font-size: 13px; color: var(--blush-deep); margin-top: 10px; }
 .fineprint { font-size: 13px; color: var(--ink-soft); margin-top: 16px; display: flex; align-items: center; gap: 8px; }
 .fineprint i { color: var(--forest); font-size: 15px; }
 

@@ -2,20 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 const navLinks = [
-  { href: "/quiz", label: "Take the Quiz" },
-  { href: "/eat-real-guide", label: "Eat Real Guide" },
-  { href: "/grocery-guide", label: "Grocery Guide" },
-  { href: "/free-guide", label: "Free Resource" },
+  { href: "/quiz", label: "Clean Cart Quiz" },
+  { href: "/eat-real-guide", label: "Eat Real, Live Better" },
+  { href: "/the-perfect-list", label: "The Perfect List" },
+  { href: "/free-guide", label: "5-Second Shopper" },
   { href: "/about", label: "About" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
-  const isGroceryGuide = pathname === "/grocery-guide";
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isPerfectList = pathname === "/the-perfect-list";
   const isEatRealGuide = pathname === "/eat-real-guide";
 
   return (
@@ -31,19 +33,8 @@ export default function Header() {
           />
           Healthy Homemade Habits
         </Link>
-        <nav className={styles.navLinks}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={pathname === link.href ? styles.active : undefined}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
         <div className={styles.navRight}>
-          {isGroceryGuide ? (
+          {isPerfectList ? (
             <a href="#buy" className="btn btn-primary">
               Get the Guide — $37
             </a>
@@ -56,10 +47,43 @@ export default function Header() {
               Get the Free Guide
             </Link>
           )}
-          <button className={styles.menuBtn} aria-label="Menu">
-            <i className="ph ph-list" />
+        </div>
+      </div>
+      <div className={styles.subNav}>
+        <div className={`wrap ${styles.subNavInner}`}>
+          <nav className={styles.navLinks}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={pathname === link.href ? styles.active : undefined}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <button
+            className={styles.menuBtn}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <i className={menuOpen ? "ph ph-x" : "ph ph-list"} />
           </button>
         </div>
+        {menuOpen && (
+          <div className={`wrap ${styles.mobileMenu}`}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={pathname === link.href ? styles.active : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </header>
   );

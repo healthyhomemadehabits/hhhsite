@@ -25,7 +25,7 @@ export default function Footer() {
           <span className={styles.label}>Explore</span>
           <Link href="/">Home</Link>
           <Link href="/free-guide">Free Guide</Link>
-          <Link href="/grocery-guide">Grocery Guide</Link>
+          <Link href="/the-perfect-list">Grocery Guide</Link>
           <Link href="/about">About</Link>
         </nav>
         <div className={styles.footSocial}>
@@ -38,6 +38,12 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.footBottom}>
+        <p style={{ marginBottom: 6 }}>
+          All sales of downloadable PDFs are final. No refunds, returns, or exchanges once the file is accessed.{" "}
+          <Link href="/refund-policy" style={{ color: "var(--forest)", textDecoration: "underline" }}>
+            Read Refund Policy
+          </Link>
+        </p>
         © Healthy Homemade Habits — Hana &amp; Timm
       </div>
     </footer>

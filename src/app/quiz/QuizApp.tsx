@@ -191,7 +191,7 @@ function EmailGate({ onSubmit }: { onSubmit: (email: string) => void }) {
         <EmailCaptureForm
           placeholder="you@email.com"
           buttonLabel="Show Me My Results"
-          onSubmit={onSubmit}
+          onSuccess={onSubmit}
         />
       </div>
       <p className={`fineprint ${styles.centerFine}`}>

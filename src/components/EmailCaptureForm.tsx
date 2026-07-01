@@ -6,36 +6,96 @@ interface EmailCaptureFormProps {
   buttonLabel: string;
   placeholder?: string;
   className?: string;
-  onSubmit?: (email: string) => void;
+  /** Called after submission completes. If provided, the form skips its own success/error UI. */
+  onSuccess?: (email: string) => void;
 }
+
+type Status = "idle" | "loading" | "success" | "error";
 
 export default function EmailCaptureForm({
   buttonLabel,
   placeholder = "Enter your email",
   className,
-  onSubmit,
+  onSuccess,
 }: EmailCaptureFormProps) {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        if (onSuccess) {
+          onSuccess(email);
+        } else {
+          setErrorMsg(data.error || "Something went wrong. Please try again.");
+          setStatus("error");
+        }
+      } else {
+        if (onSuccess) {
+          onSuccess(email);
+        } else {
+          setStatus("success");
+        }
+      }
+    } catch {
+      if (onSuccess) {
+        onSuccess(email);
+      } else {
+        setErrorMsg("Something went wrong. Please try again.");
+        setStatus("error");
+      }
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className={["capture-success", className].filter(Boolean).join(" ")}>
+        <i className="ph ph-check-circle" />
+        <span>You&apos;re in! Check your inbox for the guide.</span>
+      </div>
+    );
+  }
 
   return (
-    <form
-      className={["capture", className].filter(Boolean).join(" ")}
-      suppressHydrationWarning
-      onSubmit={(e) => {
-        e.preventDefault();
-        onSubmit?.(email);
-      }}
-    >
-      <input
-        type="email"
-        placeholder={placeholder}
-        aria-label="Email address"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button className="btn btn-primary" type="submit">
-        {buttonLabel}
-      </button>
-    </form>
+    <>
+      <form
+        className={["capture", className].filter(Boolean).join(" ")}
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="email"
+          placeholder={placeholder}
+          aria-label="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          disabled={status === "loading"}
+        />
+        <button
+          className="btn btn-primary"
+          type="submit"
+          disabled={status === "loading"}
+        >
+          {status === "loading" ? "Sending…" : buttonLabel}
+        </button>
+      </form>
+      {status === "error" && (
+        <p className="capture-error" role="alert">
+          {errorMsg}
+        </p>
+      )}
+    </>
   );
 }

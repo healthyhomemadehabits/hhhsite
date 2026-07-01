@@ -9,7 +9,7 @@ const productSchema = {
   name: "The Perfect Grocery List",
   description:
     "A 5-chapter grocery shopping system with list templates, meal planners, retail psychology insights, UPF identification tips, and 14 healthy recipes. Helps you shop smarter, eat healthier, and save money.",
-  url: "https://www.healthyhomemadehabits.com/grocery-guide",
+  url: "https://www.healthyhomemadehabits.com/the-perfect-list",
   brand: { "@type": "Organization", name: "Healthy Homemade Habits" },
   author: [
     { "@type": "Person", name: "Hana" },
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     title: "The Perfect Grocery List — $47 | Healthy Homemade Habits",
     description:
       "Stop dreading the grocery store. A complete shopping system with list templates, meal planners, retail psychology tips, UPF guides, and 14 healthy recipes. $47 instant download.",
-    url: "https://www.healthyhomemadehabits.com/grocery-guide",
+    url: "https://www.healthyhomemadehabits.com/the-perfect-list",
   },
 };
 
@@ -240,7 +240,7 @@ export default function GroceryGuidePage() {
               Ever wonder why the grocery stores seem to be filled with bad-for-you food? Or why, even if you go in for 1 item, you can never leave without less than 10? What ever happened to the good old days of knowledgeable butchers and mountains of fresh produce? Don't the stores want you to make healthy choices? This guide answers all those questions, and so much more! Join us as we uncover all of the tricks, traps, and truths of retail psychology, and how you can use that knowledge to become a better, healthier shopper!
             </p>
             <div className={styles.heroCta}>
-              <a href="/hhhsite/grocery-guide/waitlist" className="btn btn-primary lg">
+              <a href="/the-perfect-list/waitlist" className="btn btn-primary lg">
                 Get the Guide - $47
               </a>
               <span className={styles.guarantee}>
@@ -368,7 +368,7 @@ export default function GroceryGuidePage() {
               $47 <small>Instant Download</small>
             </div>
             <div style={{ marginTop: "26px" }}>
-              <a href="/hhhsite/grocery-guide/waitlist" className="btn btn-primary lg">
+              <a href="/the-perfect-list/waitlist" className="btn btn-primary lg">
                 Get The Perfect Grocery List
               </a>
             </div>

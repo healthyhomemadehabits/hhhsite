@@ -179,7 +179,7 @@ export default function Home() {
               <Link href="/free-guide" className="btn btn-primary">
                 Get the Free Guide
               </Link>
-              <Link href="/grocery-guide" className="btn btn-outline">
+              <Link href="/the-perfect-list" className="btn btn-outline">
                 Shop the Grocery Guide
               </Link>
             </div>
@@ -284,7 +284,7 @@ export default function Home() {
               <span className={styles.price}>$17</span>
               <span className={styles.was}>Take the first step to healthy eating!</span>
             </div>
-            <Link href="/grocery-guide" className="btn btn-primary">
+            <Link href="/the-perfect-list" className="btn btn-primary">
               Get the Grocery Guide
             </Link>
             <p className="fineprint">
@@ -326,7 +326,7 @@ export default function Home() {
               <span className={styles.price}>$47</span>
               <span className={styles.was}>Become a smarter shopper today!</span>
             </div>
-            <Link href="/grocery-guide" className="btn btn-primary">
+            <Link href="/the-perfect-list" className="btn btn-primary">
               Get the Grocery Guide
             </Link>
             <p className="fineprint">

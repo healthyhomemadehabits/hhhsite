@@ -349,6 +349,11 @@ export default function EatRealGuidePage() {
               <i className="ph ph-files" />
               Instant digital download
             </p>
+            <p className="fineprint" style={{ justifyContent: "center", marginTop: 8 }}>
+              <i className="ph ph-prohibit" />
+              All sales of downloadable PDFs are final. No refunds, returns, or exchanges once the file is accessed.{" "}
+              <a href="/refund-policy" style={{ color: "var(--forest)", textDecoration: "underline" }}>Refund Policy</a>
+            </p>
           </div>
         </div>
       </section>
