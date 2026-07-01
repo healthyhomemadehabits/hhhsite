@@ -3,10 +3,111 @@ import Faq from "@/components/Faq";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "The Perfect Grocery List — $47 | Healthy Homemade Habits",
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "The Perfect Grocery List",
   description:
-    "We all have to grocery shop, so why not make it easier, healthier, and more enjoyable? Timm and I help you organize your shopping trip, so that you can shop smarter, eat healthier, and create better habits, one cart at a time!",
+    "A 5-chapter grocery shopping system with list templates, meal planners, retail psychology insights, UPF identification tips, and 14 healthy recipes. Helps you shop smarter, eat healthier, and save money.",
+  url: "https://www.healthyhomemadehabits.com/grocery-guide",
+  brand: { "@type": "Organization", name: "Healthy Homemade Habits" },
+  author: [
+    { "@type": "Person", name: "Hana" },
+    { "@type": "Person", name: "Timm" },
+  ],
+  offers: {
+    "@type": "Offer",
+    price: "47.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    seller: { "@type": "Organization", name: "Healthy Homemade Habits" },
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How is The Perfect Grocery List different than buying a grocery list template on Etsy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Perfect Grocery List isn't just a grocery list template, but a simple system for getting you organized before you get to the store. Many shopping list templates overcomplicate things by including superfluous charts and trackers that have nothing to do with grocery shopping. The Perfect Grocery List is simple and straightforward, but effective, because it was designed by practical shoppers who hate to faff around.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is The Perfect Grocery List just templates?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, it's so much more than templates! We've done the research on the tips, tricks, and traps of the grocery store, so you can get in and out quicker, on budget, and without the usual hassle. We also teach you how to read ingredient labels, how to spot UPF red flags, and how to organize yourself for sustainable results.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I have to follow a certain diet or budget to use The Perfect Grocery List?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Not at all! This list is inclusive of all diets and grocery budgets. The list system helps you better judge how much you're spending on each trip because of the way it's laid out. For specific diets, this list (in conjunction with the included menu planner) helps you keep track of what you're buying so you never forget a crucial ingredient.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "I'm not an organized person and I hate making lists. Is The Perfect Grocery List for me?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! The Perfect Grocery List is perfect for you because it's been designed in a way that basically organizes itself for you. All you need to do is choose some recipes or meals, fill out the needed ingredients in the provided columns, and get shopping. It's even more simple than writing a list on the back of a piece of mail.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will The Perfect Grocery List work for a single person?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! The Perfect Grocery List was made to organize shopping for households of all sizes, whether you're shopping just for yourself, for a couple, or for a family.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "I prefer to shop online rather than in the store. Can I use The Perfect Grocery List?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Definitely! The Perfect Grocery list works in person, but is also ideal for organizing your online shopping. Because the grocery list and meal planner work hand-in-hand, grocery shopping online becomes even easier when you have a column-style plan in front of you.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How will I receive my copy of The Perfect Grocery List?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "After purchasing, you'll have the option to click a download now button; the PDF will save directly to your device. We'll also send it in an email. This is an instant download that can be read on any device, any time.",
+      },
+    },
+  ],
+};
+
+export const metadata: Metadata = {
+  title: "The Perfect Grocery List — Smarter, Healthier Shopping System ($47)",
+  description:
+    "A 5-chapter grocery shopping guide with list templates, meal planners, retail psychology secrets, UPF identification tips, and 14 healthy recipes. Stop dreading the grocery store. $47 instant PDF download.",
+  keywords: [
+    "grocery list template",
+    "healthy grocery shopping guide",
+    "grocery organization system",
+    "how to shop for real food",
+    "meal planning grocery list",
+    "avoid impulse buying grocery store",
+    "retail psychology grocery store",
+    "ultra processed food grocery shopping",
+    "smarter grocery shopping PDF",
+  ],
+  openGraph: {
+    title: "The Perfect Grocery List — $47 | Healthy Homemade Habits",
+    description:
+      "Stop dreading the grocery store. A complete shopping system with list templates, meal planners, retail psychology tips, UPF guides, and 14 healthy recipes. $47 instant download.",
+    url: "https://www.healthyhomemadehabits.com/grocery-guide",
+  },
 };
 
 const features = [
@@ -118,6 +219,14 @@ const faqItems = [
 export default function GroceryGuidePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ============ HERO ============ */}
       <section className={styles.hero}>
         <div className={`wrap ${styles.heroGrid}`}>

@@ -3,9 +3,25 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "About Us — Hana & Timm | Healthy Homemade Habits",
+  title: "About Hana & Timm",
   description:
-    "We're Hana and Timm, a Midwest couple who cut Ultra Processed Foods in 2020 and haven't looked back. We believe in balance, real food, and the 80/20 way of eating.",
+    "Hana & Timm are a Midwest couple who cut Ultra Processed Foods in 2020 and built Healthy Homemade Habits to share what they learned. They teach the 80/20 real-food lifestyle through free guides, PDF products, and weekly YouTube videos.",
+  keywords: [
+    "Hana and Timm",
+    "Healthy Homemade Habits founders",
+    "real food couple",
+    "80/20 lifestyle",
+    "ultra processed food free",
+    "healthy homemade cooking",
+    "Midwest food bloggers",
+    "who are Healthy Homemade Habits",
+  ],
+  openGraph: {
+    title: "About Hana & Timm | Healthy Homemade Habits",
+    description:
+      "We cut Ultra Processed Foods in 2020 and haven't looked back. We teach the 80/20 real-food lifestyle through free guides, PDF products, and weekly YouTube videos.",
+    url: "https://www.healthyhomemadehabits.com/about",
+  },
 };
 
 const socials = [

@@ -3,10 +3,95 @@ import Faq from "@/components/Faq";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Eat Real, Live Better - $17 | Healthy Homemade Habits",
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Eat Real, Live Better",
   description:
-    "A practical guide to reading grocery labels, navigating every aisle with confidence, and finally understanding what ultra-processed food actually is — and how to avoid it.",
+    "A practical PDF guide to reading grocery labels, identifying Ultra Processed Foods, and building sustainable 80/20 eating habits — without giving up the foods you love.",
+  url: "https://www.healthyhomemadehabits.com/eat-real-guide",
+  brand: { "@type": "Organization", name: "Healthy Homemade Habits" },
+  author: [
+    { "@type": "Person", name: "Hana" },
+    { "@type": "Person", name: "Timm" },
+  ],
+  offers: {
+    "@type": "Offer",
+    price: "17.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    seller: { "@type": "Organization", name: "Healthy Homemade Habits" },
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is this a diet?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In a way, yes, but more than that, 80/20 is a way of life. Unlike traditional diets, the 80/20 method is much more flexible. The focus is on balancing your diet so you're mostly eating real food, and eating smaller amounts of indulgences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I have to give up my favorite foods?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No! The 80/20 method is built so that for 20% of the week, you can relax and enjoy less-than-healthy foods without guilt. Life is about balance — if you mostly eat fresh, nutrient-rich foods, a little fun treat won't erase all that good work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "I've never dieted before. Is the 80/20 method for me?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! The 80/20 method is for anyone who wants to ease into eating healthier and sustainably keep eating healthier throughout life. Because the method is flexible, you choose the foods you eat — with the understanding that 80% of the time you're making healthy choices and 20% of the time you're choosing to indulge a bit.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When can I expect to see results from eating less ultra processed food?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Results vary, but this is a marathon, not a sprint. If you start cutting UPFs and balancing your diet 80% fresh and wholesome with 20% indulgences, you'll likely start to see and feel benefits fairly quickly. This is a long-term eating method with benefits that cumulate over time.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I receive my Eat Real, Live Better PDF?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "After purchasing, you'll have the option to click a download now button; the PDF saves directly to your device. We'll also send it in an email. It's an instant download readable on any device, any time.",
+      },
+    },
+  ],
+};
+
+export const metadata: Metadata = {
+  title: "Eat Real, Live Better — $17 Guide to Cutting Ultra Processed Foods",
+  description:
+    "A practical PDF guide to reading grocery labels, identifying Ultra Processed Foods, and building 80/20 eating habits without giving up the foods you love. $17 instant download.",
+  keywords: [
+    "how to stop eating ultra processed foods",
+    "80/20 diet guide",
+    "real food eating plan",
+    "ingredient label reading guide",
+    "UPF guide PDF",
+    "healthy eating without dieting",
+    "cut processed food from diet",
+    "ultra processed food explained",
+    "real food swaps",
+  ],
+  openGraph: {
+    title: "Eat Real, Live Better — $17 | Healthy Homemade Habits",
+    description:
+      "Learn to identify Ultra Processed Foods, read any ingredient label in seconds, and start the 80/20 real-food lifestyle. Instant PDF download, $17.",
+    url: "https://www.healthyhomemadehabits.com/eat-real-guide",
+  },
 };
 
 const features = [
@@ -103,6 +188,14 @@ const faqItems = [
 export default function EatRealGuidePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ============ HERO ============ */}
       <section className={styles.hero}>
         <div className={`wrap ${styles.heroGrid}`}>

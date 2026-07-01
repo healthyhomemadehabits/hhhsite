@@ -1,7 +1,33 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Healthy Homemade Habits — Real Food. Real Life. 80/20.",
+  },
+  description:
+    "Hana & Timm help everyday people cut Ultra Processed Foods using the 80/20 eating method — without giving up the foods they love. Get a free UPF ingredient guide, grocery shopping system, and weekly real-food tips.",
+  keywords: [
+    "ultra processed foods",
+    "cut processed foods",
+    "80/20 diet",
+    "real food lifestyle",
+    "healthy grocery shopping",
+    "UPF free diet",
+    "healthy eating guide",
+    "whole food habits",
+    "avoid ultra processed food",
+  ],
+  openGraph: {
+    title: "Healthy Homemade Habits — Real Food. Real Life. 80/20.",
+    description:
+      "Cut Ultra Processed Foods without giving up the foods you love. Free UPF ingredient guide, grocery list system, and weekly real-food tips from Hana & Timm.",
+    url: "https://www.healthyhomemadehabits.com",
+  },
+};
 
 const beliefs = [
   {

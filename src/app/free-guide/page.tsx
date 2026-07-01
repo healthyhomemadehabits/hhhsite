@@ -3,10 +3,42 @@ import EmailCaptureForm from "@/components/EmailCaptureForm";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Eat Real, Live Better — Free Guide | Healthy Homemade Habits",
+const freeGuideSchema = {
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  name: "The 5-Second Shopper",
   description:
-    "A warm, no-pressure starter guide to understanding real food and taking your very first step - the 80/20 way. Made by a Midwest couple who've been exactly where you are.",
+    "A free quick-reference guide listing 125+ Ultra Processed Food ingredients alphabetically, color-coded by severity, plus a simple 5-second formula for evaluating any packaged food at the grocery store.",
+  author: { "@type": "Organization", name: "Healthy Homemade Habits" },
+  url: "https://www.healthyhomemadehabits.com/free-guide",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+  },
+};
+
+export const metadata: Metadata = {
+  title: "The 5-Second Shopper — Free UPF Ingredient Guide",
+  description:
+    "Free downloadable guide listing 125+ Ultra Processed Food ingredients, color-coded by severity (fine, moderate, avoid), plus our simple 5-second formula for evaluating any packaged food at the grocery store.",
+  keywords: [
+    "ultra processed food ingredients list",
+    "UPF ingredients",
+    "how to identify processed foods",
+    "food additives list",
+    "free healthy eating guide",
+    "ingredient label reading",
+    "how to avoid ultra processed foods",
+    "packaged food evaluation",
+  ],
+  openGraph: {
+    title: "The 5-Second Shopper — Free UPF Ingredient Guide | Healthy Homemade Habits",
+    description:
+      "Free guide: 125+ Ultra Processed Food ingredients listed alphabetically, color-coded by severity. Includes our simple 5-second formula for evaluating packaged foods at the grocery store.",
+    url: "https://www.healthyhomemadehabits.com/free-guide",
+  },
 };
 
 const whatsInside = [
@@ -60,6 +92,10 @@ const benefits = [
 export default function FreeGuidePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(freeGuideSchema) }}
+      />
       {/* ============ HERO ============ */}
       <section className={styles.hero} id="get">
         <div className={`wrap ${styles.heroGrid}`}>
