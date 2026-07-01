@@ -26,13 +26,13 @@ export default function Footer() {
           <Link href="/">Home</Link>
           <Link href="/free-guide">Free Guide</Link>
           <Link href="/grocery-guide">Grocery Guide</Link>
-          <Link href="/#about">About</Link>
+          <Link href="/about">About</Link>
         </nav>
         <div className={styles.footSocial}>
           <a href="#" aria-label="Instagram">
             <i className="ph ph-instagram-logo" />
           </a>
-          <a href="#" aria-label="YouTube">
+          <a href="https://www.youtube.com/@healthyhomemadehabits" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
             <i className="ph ph-youtube-logo" />
           </a>
         </div>

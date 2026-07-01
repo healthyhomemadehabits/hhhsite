@@ -371,7 +371,7 @@ export default function Home() {
             ))}
           </div>
           <div className={styles.centerCta}>
-            <a href="#" className="btn btn-outline">
+            <a href="https://www.youtube.com/@healthyhomemadehabits" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
               Watch on YouTube
             </a>
           </div>

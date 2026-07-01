@@ -1,0 +1,109 @@
+/* ============ HERO ============ */
+.hero { padding: 0; }
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 72px;
+  align-items: center;
+  padding: 56px 40px 104px;
+}
+.hero h1 { font-size: clamp(42px, 5.5vw, 78px); line-height: .99; margin-top: 22px; }
+.sub { font-size: 20px; color: var(--ink-soft); max-width: 520px; margin: 28px 0 0; }
+
+.heroMedia :global(.ph-img) { aspect-ratio: 4 / 5; }
+.heroCap {
+  margin-top: 16px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ============ PROSE ============ */
+.prose { max-width: 720px; }
+.prose h2 { font-size: clamp(30px, 3.8vw, 50px); margin: 14px 0 32px; }
+.prose p {
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+  max-width: 660px;
+}
+
+.inlineLink {
+  color: var(--forest);
+  border-bottom: 1px solid var(--forest);
+  padding-bottom: 1px;
+  transition: opacity .15s ease;
+}
+.inlineLink:hover { opacity: .65; }
+
+/* ============ GROCERY ============ */
+.groceryGrid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 72px;
+  align-items: center;
+}
+.groceryMedia :global(.ph-img) { aspect-ratio: 5 / 4; }
+.groceryGrid h2 { font-size: clamp(30px, 3.8vw, 50px); margin: 14px 0 24px; }
+.groceryGrid p { font-size: 18px; color: var(--ink-soft); margin-bottom: 18px; max-width: 520px; }
+
+/* ============ CONTACT ============ */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+.contactHead h2 { font-size: clamp(30px, 3.6vw, 48px); margin: 14px 0 20px; }
+.contactHead p { font-size: 18px; color: var(--ink-soft); }
+
+.socialList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: center;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  transition: color .15s ease;
+  color: var(--ink);
+}
+.socialList li:first-child .socialRow { border-top: 1px solid var(--line); }
+.socialRow:hover { color: var(--forest); }
+
+.socialRow i { font-size: 22px; color: var(--forest); flex-shrink: 0; }
+.socialLabel {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  flex: 1;
+}
+.arrow { font-size: 16px; color: var(--ink-soft); transition: transform .15s ease; }
+.socialRow:hover .arrow { transform: translateX(4px); color: var(--forest); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 960px) {
+  .heroGrid, .groceryGrid, .contact {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .heroMedia { order: -1; max-width: 320px; }
+  .groceryMedia { max-width: 400px; }
+}
+
+@media (max-width: 680px) {
+  .heroGrid { padding: 48px 0 64px; }
+  :global(.frame).contact { padding: 40px; }
+}

@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/eat-real-guide", label: "Eat Real Guide" },
   { href: "/grocery-guide", label: "Grocery Guide" },
   { href: "/free-guide", label: "Free Resource" },
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Header() {
