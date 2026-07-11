@@ -23,10 +23,13 @@ export default function Footer() {
         </div>
         <nav className={styles.footNav}>
           <span className={styles.label}>Explore</span>
-          <Link href="/">Home</Link>
-          <Link href="/free-guide">Free Guide</Link>
-          <Link href="/the-perfect-list">Grocery Guide</Link>
-          <Link href="/about">About</Link>
+          <div className={styles.footNavLinks}>
+            <Link href="/">Home</Link>
+            <Link href="/free-guide">The 5-Second Shopper</Link>
+            <Link href="/eat-real-guide">Eat Real, Live Better</Link>
+            <Link href="/the-perfect-list">The Perfect Grocery List</Link>
+            <Link href="/about">About</Link>
+          </div>
         </nav>
         <div className={styles.footSocial}>
           <a href="#" aria-label="Instagram">

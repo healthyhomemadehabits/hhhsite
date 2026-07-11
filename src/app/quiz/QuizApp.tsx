@@ -399,7 +399,7 @@ function Confirm({
           onClick={onGuide}
         >
           <span className={styles.softEyebrow}>Want to learn first?</span>
-          <span className={styles.softTitle}>Get the Grocery Guide for $37</span>
+          <span className={styles.softTitle}>Get The Perfect Grocery List for $47</span>
           <span className={styles.softArrow}>
             <i className="ph ph-arrow-right" />
           </span>

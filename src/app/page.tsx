@@ -180,7 +180,7 @@ export default function Home() {
                 Get the Free Guide
               </Link>
               <Link href="/the-perfect-list" className="btn btn-outline">
-                Shop the Grocery Guide
+                The Perfect Grocery List
               </Link>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function Home() {
             <PlaceholderImage
               variant="rose"
               icon="ph-book-bookmark"
-              label="cover — Grocery Guide"
+              label="cover — Eat Real, Live Better"
             />
           </div>
           <div>
@@ -284,8 +284,8 @@ export default function Home() {
               <span className={styles.price}>$17</span>
               <span className={styles.was}>Take the first step to healthy eating!</span>
             </div>
-            <Link href="/the-perfect-list" className="btn btn-primary">
-              Get the Grocery Guide
+            <Link href="/eat-real-guide" className="btn btn-primary">
+              Get the Guide
             </Link>
             <p className="fineprint">
               <i className="ph ph-watch" />
@@ -327,7 +327,7 @@ export default function Home() {
               <span className={styles.was}>Become a smarter shopper today!</span>
             </div>
             <Link href="/the-perfect-list" className="btn btn-primary">
-              Get the Grocery Guide
+              Get The Perfect List
             </Link>
             <p className="fineprint">
               <i className="ph ph-hourglass-medium" />
@@ -339,7 +339,7 @@ export default function Home() {
             <PlaceholderImage
               variant="rose"
               icon="ph-book-bookmark"
-              label="cover — Grocery Guide"
+              label="cover — The Perfect Grocery List"
             />
           </div>
         </div>

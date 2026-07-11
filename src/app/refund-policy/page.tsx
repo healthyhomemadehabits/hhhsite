@@ -30,10 +30,10 @@ export default function RefundPolicyPage() {
         <p style={{ fontSize: 18, lineHeight: 1.7 }}>
           Contact us at{" "}
           <a
-            href="mailto:timmschoenborn@gmail.com"
+            href="mailto:healthyhomemadewife@gmail.com"
             style={{ color: "var(--forest)", textDecoration: "underline" }}
           >
-            timmschoenborn@gmail.com
+            healthyhomemadewife@gmail.com
           </a>{" "}
           with any questions.
         </p>

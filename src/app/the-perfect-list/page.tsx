@@ -253,7 +253,7 @@ export default function GroceryGuidePage() {
             <PlaceholderImage
               variant="rose"
               icon="ph-book-bookmark"
-              label="cover — Grocery Guide"
+              label="cover — The Perfect List"
             />
             <div className={styles.heroCap}>
               <span className={styles.price}>$47</span>
