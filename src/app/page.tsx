@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import heroImg from "../../public/images/main_home_lifestyle.jpeg";
+import coupleImg from "../../public/images/handt_couple_photo.jpeg";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -35,7 +38,7 @@ const beliefs = [
     accent: "a-forest",
     title: "Food should nourish you, not confuse you!",
     description:
-      "Ingredient labels are straightforward, but the actual ingredients? Not always. We made a list of the most common Ultra Processed Ingredients you'll find in everyday foods, explain what they do in simple terms, and uncover what foods you'll find them in.",
+      "Ingredient labels are straightforward, but the actual ingredients? Not always. We made a list of the most common Ultra Processed Ingredients you'll find in everyday foods, explain what they do in simple terms, and uncover what products you'll find them in.",
   },
   {
     icon: "ph-scales",
@@ -185,10 +188,15 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.heroMedia}>
-            <PlaceholderImage
-              icon="ph-camera"
-              label="lifestyle photo — Hana & Timm in the kitchen"
-            />
+            <div className={styles.heroImgWrap}>
+              <Image
+                src={heroImg}
+                alt="Hana and Timm in the kitchen"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -211,7 +219,7 @@ export default function Home() {
         <div className="wrap">
           <div className="head-center">
             <span className="eyebrow">What we believe</span>
-            <h2>Eating healthfully shouldn&apos;t be gatekept</h2>
+            <h2>Eating Healthy Should Be Easy</h2>
           </div>
           <div className="kgrid cols-3">
             {beliefs.map((belief) => (
@@ -349,10 +357,14 @@ export default function Home() {
       <section className="section line" id="about">
         <div className={`wrap ${styles.aboutGrid}`}>
           <div className={styles.aboutMedia}>
-            <PlaceholderImage
-              icon="ph-camera"
-              label="couple photo — Hana & Timm"
-            />
+            <div className={styles.coupleImgWrap}>
+              <Image
+                src={coupleImg}
+                alt="Hana and Timm"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
           <div>
             <span className="eyebrow">Our Story</span>
@@ -370,7 +382,7 @@ export default function Home() {
       </section>
 
       {/* ============ YOUTUBE ============ */}
-      <section className="section line">
+      <section className="section line" style={{ display: "none" }}>
         <div className="wrap">
           <div className="head-center">
             <span className="eyebrow">More free tips and tricks</span>

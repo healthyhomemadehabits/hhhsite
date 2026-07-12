@@ -72,9 +72,15 @@
   transform-origin: left;
   transition: transform .22s ease;
 }
-.navLinks a:hover::after,
-.navLinks a.active::after {
+.navLinks a:hover::after {
   transform: scaleX(1);
+}
+.navLinks a.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--forest);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .menuBtn {
