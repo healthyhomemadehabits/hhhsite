@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
+
+import tpglImg from "../../../public/images/web_mockups/Product Page TFSS.png";
+import coupleImg from "../../../public/images/handt_couple_photo.jpeg";
 
 const freeGuideSchema = {
   "@context": "https://schema.org",
@@ -130,11 +133,15 @@ export default function FreeGuidePage() {
             </p>
           </div>
           <div className={styles.heroMedia}>
-            <PlaceholderImage
-              variant="rose"
-              icon="ph-book-open"
-              label="cover — “Eat Real, Live Better”"
-            />
+              <div className={styles.productCover}>
+                <Image
+                  src={tpglImg}
+                  alt="The 5-Second Shopper — free guide product mockup"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority
+                />
+              </div>
             <p className={styles.heroCap}>A free guide from Hana &amp; Timm</p>
           </div>
         </div>
@@ -182,10 +189,14 @@ export default function FreeGuidePage() {
       <section className="section line">
         <div className={`wrap ${styles.aboutGrid}`}>
           <div className={styles.aboutMedia}>
-            <PlaceholderImage
-              icon="ph-camera"
-              label="couple photo — Hana & Timm"
-            />
+            <div className={styles.coupleCover}>
+              <Image
+                src={coupleImg}
+                alt="Hana and Timm"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
           <div>
             <span className="eyebrow">Our Story</span>

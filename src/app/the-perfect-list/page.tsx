@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Faq from "@/components/Faq";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
+
+import tpglImg from "../../../public/images/web_mockups/Main Page TPGL Option 2.png";
+import coupleImg from "../../../public/images/handt_couple_photo.jpeg";
 
 const productSchema = {
   "@context": "https://schema.org",
@@ -250,11 +253,15 @@ export default function GroceryGuidePage() {
             </div>
           </div>
           <div className={styles.heroMedia}>
-            <PlaceholderImage
-              variant="rose"
-              icon="ph-book-bookmark"
-              label="cover — The Perfect List"
-            />
+            <div className={styles.productCover}>
+              <Image
+                src={tpglImg}
+                alt="The Perfect Grocery List product mockup"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
             <div className={styles.heroCap}>
               <span className={styles.price}>$47</span>
               <span className={styles.pages}>Download now</span>
@@ -324,10 +331,14 @@ export default function GroceryGuidePage() {
       <section className="section line">
         <div className={`wrap ${styles.bioGrid}`}>
           <div className={styles.bioMedia}>
-            <PlaceholderImage
-              icon="ph-camera"
-              label="couple photo — Hana & Timm"
-            />
+            <div className={styles.coupleCover}>
+              <Image
+                src={coupleImg}
+                alt="Hana and Timm"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
           <div>
             <span className="eyebrow">A Tale of Two Shoppers</span>

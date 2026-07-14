@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import Image from "next/image";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
+import cartImg from "../../../public/images/shopping_cart.jpg";
 import Tag from "@/components/Tag";
 import styles from "./quiz.module.css";
 import {
@@ -112,11 +114,15 @@ function Entry({ onStart }: { onStart: () => void }) {
         </p>
       </div>
       <div className={styles.entryMedia}>
-        <PlaceholderImage
-          icon="ph-shopping-cart-simple"
-          aspect="4/4.6"
-          label="still life — cart of fresh produce, sage & apricot tones"
-        />
+        <div className={styles.cartCover}>
+          <Image
+            src={cartImg}
+            alt="Cart full of fresh groceries"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </div>
       </div>
     </div>
   );

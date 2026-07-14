@@ -4,6 +4,9 @@ import Link from "next/link";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import heroImg from "../../public/images/main_home_lifestyle.jpeg";
+import fssImg from "../../public/images/web_mockups/Main Page TFSS.png";
+import erlbImg from "../../public/images/web_mockups/Main Page ERLB.png";
+import tpglImg from "../../public/images/web_mockups/Main Page TPGL Option 1.png";
 import coupleImg from "../../public/images/handt_couple_photo.jpeg";
 import styles from "./page.module.css";
 
@@ -182,6 +185,12 @@ export default function Home() {
               <Link href="/free-guide" className="btn btn-primary">
                 Get the Free Guide
               </Link>
+              <Link href="/eat-real-guide" className="btn btn-primary">
+                Eat Real, Live Better
+              </Link>
+              <Link href="/quiz" className="btn btn-outline">
+                Clean Cart Quiz
+              </Link>
               <Link href="/the-perfect-list" className="btn btn-outline">
                 The Perfect Grocery List
               </Link>
@@ -238,11 +247,20 @@ export default function Home() {
         <div className="wrap">
           <div className={`frame ${styles.freebieGrid}`}>
             <div className={styles.freebieCover}>
-              <PlaceholderImage
+              {/* <PlaceholderImage
                 variant="rose"
                 icon="ph-book-open"
                 label="cover — “Eat Real, Live Better”"
-              />
+              /> */}
+              <div className={styles.productImgWrap}>
+                <Image
+                  src={fssImg}
+                  alt="five second shopper promotional image"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority
+                />
+              </div>
             </div>
             <div>
               <span className="eyebrow">Free resource - The Five Second Shopper</span>
@@ -253,7 +271,7 @@ export default function Home() {
               <EmailCaptureForm buttonLabel="Send Me the Guide" />
               <p className="fineprint">
                 <i className="ph ph-lock-simple" />
-                When you download The 5-Second Shopper, you&apos;re agreeing to signing up for our email list. We email once a week, with no obligation to purchase anything. Unsubscribe at any time.
+                <small>When you download The 5-Second Shopper, you&apos;re agreeing to signing up for our email list. We email once a week, with no obligation to purchase anything. Unsubscribe at any time.</small>
               </p>
             </div>
           </div>
@@ -264,16 +282,19 @@ export default function Home() {
       <section className="section line" id="product">
         <div className={`wrap ${styles.productGrid}`}>
           <div className={styles.productCover}>
-            <span className={styles.productTag}>Most loved</span>
-            <PlaceholderImage
-              variant="rose"
-              icon="ph-book-bookmark"
-              label="cover — Eat Real, Live Better"
-            />
+            <div className={styles.productImgWrap}>
+                <Image
+                  src={erlbImg}
+                  alt="eat real live better snapshot example"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority
+                />
+              </div>
           </div>
           <div>
             <span className="eyebrow">Eat Real, Live Better</span>
-            <h2>Tired of traditional dieting, but seeing no results? Our approach is different.</h2>
+            <h2>Tired of traditional dieting, and seeing no results? Our approach is different.</h2>
             <p className={styles.lead}>
               Now that you know what common Ultra Processed ingredients are lurking in your favorite foods, are you ready to take the next step in cutting them out of your diet? If it sounds daunting, we make it easy for you! <span><b>Eat Real, Live Better: How to Begin Eating Real Food Without Giving Up Everything You Love </b></span>goes more in depth on why Ultra Processed Foods exist, why the grocery stores push them, and how to safeguard yourself against them with the 80/20 eating method. If you&apos;ve been wanting to eat healthier but need a little extra guidance, look no further than this PDF!
             </p>
@@ -310,7 +331,7 @@ export default function Home() {
             <span className="eyebrow">The Perfect Grocery List</span>
             <h2>Tired of spending hours at the grocery store, and still always forgetting one thing?</h2>
             <p className={styles.lead}>
-              We all have to grocery shop, so why not make the experience more enjoyable?! Timm and I have developed a guide to make your shopping trips quicker, easier, and actually fun! This guide helps you shop smarter, eat healthier, and create better habits one trip at a time!
+              We all have to grocery shop, so why not make the experience more enjoyable? Timm and I have developed a guide to make your shopping trips quicker, easier, and actually fun! This guide helps you shop smarter, eat healthier, and create better habits one trip at a time!
             </p>
             <div className={styles.featureList}>
               {groceryFeatures.map((f) => (
@@ -343,12 +364,15 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.productCover}>
-            <span className={styles.productTag}>Most loved</span>
-            <PlaceholderImage
-              variant="rose"
-              icon="ph-book-bookmark"
-              label="cover — The Perfect Grocery List"
-            />
+            <div className={styles.productImgWrap}>
+              <Image
+                src={tpglImg}
+                alt="the perfect grocery list promotional image"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -374,7 +398,7 @@ export default function Home() {
             </p>
             <p>We&apos;re so excited to share what we&apos;ve learned with you!</p>
             <p className={styles.sig}>- Hana &amp; Timm</p>
-            <a href="#" className="linkarrow">
+            <a href="/about" className="linkarrow">
               Read our full story <i className="ph ph-arrow-right" />
             </a>
           </div>
@@ -421,9 +445,9 @@ export default function Home() {
         <div className="wrap">
           <div className="frame cta-center">
             <span className="eyebrow">One better choice</span>
-            <h2 style={{ marginTop: "18px" }}>
+            <h3 style={{ marginTop: "18px" }}>
               Better choices lead to healthy habits.<br/> Healthy habits lead to a better life.
-            </h2>
+            </h3>
             <p className="lead" style={{ margin: "22px 0 36px" }}>
               Download The 5-Second Shopper to start your healthy habits today!
             </p>

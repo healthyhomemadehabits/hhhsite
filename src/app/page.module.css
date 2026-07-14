@@ -15,6 +15,7 @@
 }
 .heroCta { display: flex; gap: 18px; flex-wrap: wrap; }
 .heroImgWrap { position: relative; aspect-ratio: 4 / 4.7; overflow: hidden; border: 5px solid var(--forest); }
+.productImgWrap { position: relative; aspect-ratio: 5 / 4; overflow: hidden; border: 5px solid var(--forest); }
 
 /* ============ TRUST BAR ============ */
 .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }

@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Faq from "@/components/Faq";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import styles from "./page.module.css";
+
+import erlbImg from "../../../public/images/web_mockups/Product Page ERLB.png";
+import coupleImg from "../../../public/images/handt_couple_photo.jpeg";
 
 const productSchema = {
   "@context": "https://schema.org",
@@ -219,11 +223,15 @@ export default function EatRealGuidePage() {
             </div>
           </div>
           <div className={styles.heroMedia}>
-            <PlaceholderImage
-              variant="rose"
-              icon="ph-book-open"
-              label="cover — Eat Real, Live Better"
-            />
+            <div className={styles.productCover}>
+              <Image
+                src={erlbImg}
+                alt="Eat Real, Live Better product mockup"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
             <div className={styles.heroCap}>
               <span className={styles.price}>$17</span>
               <span className={styles.pages}>Get the PDF right now</span>
@@ -298,10 +306,14 @@ export default function EatRealGuidePage() {
       <section className="section line">
         <div className={`wrap ${styles.bioGrid}`}>
           <div className={styles.bioMedia}>
-            <PlaceholderImage
-              icon="ph-camera"
-              label="couple photo — Hana & Timm"
-            />
+            <div className={styles.coupleCover}>
+              <Image
+                src={coupleImg}
+                alt="Hana and Timm"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
           <div>
             <span className="eyebrow">From us to you</span>

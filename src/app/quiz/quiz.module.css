@@ -45,6 +45,13 @@
 .entrySub { font-size: 20px; line-height: 1.6; color: var(--ink-soft); margin: 26px 0 34px; max-width: 470px; }
 .entryCta { margin-bottom: 18px; }
 .entryMedia :global(.ph-img) { width: 100%; }
+.cartCover {
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  width: 100%;
+  overflow: hidden;
+  border: 5px solid var(--forest);
+}
 
 /* ---------- quiz ---------- */
 .progress { margin-bottom: 44px; }
