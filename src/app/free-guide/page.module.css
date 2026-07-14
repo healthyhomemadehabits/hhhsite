@@ -23,10 +23,10 @@
 .m i { color: var(--forest); font-size: 17px; }
 .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cream-2); }
 
-.heroMedia :global(.ph-img) { aspect-ratio: 3 / 4; }
+.heroMedia :global(.ph-img) { aspect-ratio: 5 / 4; }
 .productCover {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 5 / 4;
   overflow: hidden;
   border: 5px solid var(--forest);
 }

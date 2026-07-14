@@ -12,10 +12,10 @@
 .guarantee { display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--ink-soft); letter-spacing: .03em; }
 .guarantee i { color: var(--forest); font-size: 17px; }
 .heroMedia { position: relative; }
-.heroMedia :global(.ph-img) { aspect-ratio: 3 / 3.8; }
+.heroMedia :global(.ph-img) { aspect-ratio: 5 / 4; }
 .productCover {
   position: relative;
-  aspect-ratio: 3 / 3.8;
+  aspect-ratio: 5 / 4;
   overflow: hidden;
   border: 5px solid var(--forest);
 }
