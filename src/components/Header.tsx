@@ -8,9 +8,9 @@ import styles from "./Header.module.css";
 
 const navLinks = [
   { href: "/quiz", label: "Clean Cart Quiz" },
+  { href: "/free-guide", label: "5-Second Shopper" },
   { href: "/eat-real-guide", label: "Eat Real, Live Better" },
   { href: "/the-perfect-list", label: "The Perfect List" },
-  { href: "/free-guide", label: "5-Second Shopper" },
   { href: "/about", label: "About" },
 ];
 

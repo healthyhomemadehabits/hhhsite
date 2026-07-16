@@ -145,18 +145,18 @@ const features = [
 
 const painPoints = [
   {
-    icon: "ph-warning-circle",
-    title: "xxxxx",
+    icon: "ph-strategy",
+    title: "Easier than a diet plan",
     text: "How to balance what you eat, using the 80/20 Method. Eat healthy, wholesome food, but also the foods you love!",
   },
   {
-    icon: "ph-question",
-    title: "xxxxx",
+    icon: "ph-list-magnifying-glass",
+    title: "Demistify ingredient labels",
     text: "What actually IS an Ultra Processed Food, and what are the easiest ways to spot them? Learn how to read an ingredients label like a pro! Understand the financial advantage of from-scratch cooking over convenience cooking.",
   },
   {
-    icon: "ph-smiley-nervous",
-    title: "xxxxx",
+    icon: "ph-fork-knife",
+    title: "Start cooking healthy today",
     text: "Our favorite healthy recipes from across the internet, so you can start cooking healthy today!",
   },
 ];
@@ -240,7 +240,6 @@ export default function EatRealGuidePage() {
             </div>
             <div className={styles.heroCap}>
               <span className={styles.price}>$17</span>
-              <span className={styles.pages}>Get the PDF right now</span>
             </div>
           </div>
         </div>
@@ -250,7 +249,7 @@ export default function EatRealGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className="head-center">
-            <span className="eyebrow">Feeling stuck in a rut?</span>
+            <span className="eyebrow">A better diet</span>
             <h2>Eat Real, Live Better: How to Begin Eating Real Food Without Giving Up Everything You Love</h2>
           </div>
           <div className={styles.painCols}>
