@@ -32,7 +32,7 @@ const socials = [
   { icon: "ph-youtube-logo", label: "YouTube", href: "https://www.youtube.com/@healthyhomemadehabits" },
   { icon: "ph-instagram-logo", label: "Instagram", href: "#" },
   { icon: "ph-x-logo", label: "X", href: "#" },
-  { icon: "ph-tiktok-logo", label: "TikTok", href: "#" },
+  // { icon: "ph-tiktok-logo", label: "TikTok", href: "#" },
 ];
 
 export default function AboutPage() {

@@ -147,25 +147,25 @@ const features = [
     accent: "a-forest",
     title: "Finding delicious, healthy, and fun recipes across the internet",
     description:
-      "We give you all of our favorite recipes and recipe sources, so you can start eating healthy right away!",
+      "We give you a full week of our favorite recipes and recipe sources, so you can start eating healthy right away! We even pre-filled a list with the relevant ingredients!",
   },
   {
     icon: "ph-scales",
     accent: "a-blush",
     title: "Our Perfect Grocery List System",
     description:
-      "We've included a done-for-you menu and list, so you can start shopping efficiently today! Other materials include 4 blank grocery lists, 4 blank weekly menus, easy to read UPF lists to use on-the-go, our top recommendations for not-from-scratch foods, and further reading resources!",
+      "We've included a done-for-you menu and list, so you can start shopping efficiently today! Other materials include 4 blank grocery lists, 4 blank weekly menus, along with a pre-filled example you can use immediately to plan a week of meals!",
   },
 ];
 
 const painPoints = [
   {
-    icon: "ph-warning-circle",
-    title: "Grocery shopping shouldn't feel like a chore.",
-    text: "Walking in with a plan and a positive mindset changes everything, and saves you time and stress! (Also, just think about all the yummy food you're about to buy!",
+    icon: "ph-smiley",
+    title: "Grocery shopping shouldn't feel like a chore!",
+    text: "Walking in with a plan and a positive mindset changes everything, and saves you time and stress! (Also, just think about all the yummy food you're about to buy!)",
   },
   {
-    icon: "ph-question",
+    icon: "ph-file-magnifying-glass",
     title: "Does it pass the UPF Test?",
     text: "Understanding labels and packaging claims keeps you from making choices against your best interest!",
   },
@@ -347,7 +347,7 @@ export default function GroceryGuidePage() {
             </div>
           </div>
           <div>
-            <span className="eyebrow">A Tale of Two Shoppers</span>
+            <span className="eyebrow">We make grocery shopping fun</span>
             <h2>We learned this the hard way so you don&apos;t have to.</h2>
             <p>
               We&apos;re Hana and Timm, a couple of starry eyed grocery shoppers, supermarket tourists, and GGG stockist wannabes. (IYKYK) We&apos;ve studied the Grocery Store in search of a simpler way to shop, and we&apos;ve cracked the code! If you&apos;ve ever wished someone could just do your grocery shopping for you, try The Perfect Grocery List! It&apos;s the next best thing!
@@ -377,9 +377,9 @@ export default function GroceryGuidePage() {
         <div className="wrap">
           <div className={`frame cta-center ${styles.final}`}>
             <span className="eyebrow">Ready for the easiest shopping trip of your life?</span>
-            <h2>Download your copy of The Perfect Grocery List and shop smarter today!</h2>
+            <h2>Download your copy of The Perfect Grocery List!</h2>
             <p className="lead" style={{ marginTop: "20px" }}>
-              Take back control in the grocery store. Start using The Perfect Grocery List today!
+              Start saving time and money in the grocery store, and making healthy choices today!
             </p>
             <div className={styles.priceline}>
               $47 <small>Instant Download</small>

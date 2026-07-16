@@ -212,9 +212,6 @@ export default function FreeGuidePage() {
             <p>
               We&apos;re health-conscious (but not health-nuts!) homecooks with a love of fresh, wholesome foods, and a little side of something fun. We&apos;ve been avoiding UPFs since 2020, and haven&apos;t missed them a bit! We&apos;ve learned a lot along the way about how to make satisfying swaps, how to make common UPFs with better ingredients from scratch, and how to spot the UPF red flags in the grocery store. We&apos;re excited to share our knowledge with you!
             </p>
-            <p>
-              Ready to become a UPF super sleuth?
-            </p>
             <p className={styles.sig}>Hana &amp; Timm</p>
           </div>
         </div>
@@ -224,7 +221,7 @@ export default function FreeGuidePage() {
       <section className="section line">
         <div className="wrap">
           <div className={`frame cta-center ${styles.minicta}`}>
-            <span className="eyebrow">Ready when you are</span>
+            <span className="eyebrow">Ready to stop eating UPFs?</span>
             <h2>Grab your free copy of &ldquo;The 5-Second Shopper!&rdquo;</h2>
             <p>
               Click below to grab your free copy — it&apos;s instant!
