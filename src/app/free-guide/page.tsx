@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import EmailCaptureForm from "@/components/EmailCaptureForm";
+
 import styles from "./page.module.css";
 
 import tpglImg from "../../../public/images/web_mockups/Product Page TFSS.png";
@@ -126,10 +126,18 @@ export default function FreeGuidePage() {
                 Small steps toward better health
               </span>
             </div>
-            <EmailCaptureForm buttonLabel="Send Me the Free Guide" />
+            <a
+              href="https://checkout.mailerlite.com/checkout/32173"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Get the Free Guide
+              <i className="ph ph-arrow-square-out" />
+            </a>
             <p className="fineprint">
               <i className="ph ph-lock-simple" />
-              No spam, ever. Unsubscribe anytime.
+              No spam, ever. Unsubscribe anytime. &nbsp;·&nbsp; Opens in a new tab.
             </p>
           </div>
           <div className={styles.heroMedia}>
@@ -219,12 +227,20 @@ export default function FreeGuidePage() {
             <span className="eyebrow">Ready when you are</span>
             <h2>Grab your free copy of &ldquo;The 5-Second Shopper!&rdquo;</h2>
             <p>
-              Enter your email address, and we&apos;ll send it straight to your inbox!
+              Click below to grab your free copy — it&apos;s instant!
             </p>
-            <EmailCaptureForm
-              buttonLabel="Send Me the Free Guide"
-              className={styles.captureCenter}
-            />
+            <a
+              href="https://checkout.mailerlite.com/checkout/32173"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn btn-primary ${styles.captureCenter}`}
+            >
+              Get the Free Guide
+              <i className="ph ph-arrow-square-out" />
+            </a>
+            <p className="fineprint" style={{ justifyContent: "center" }}>
+              Opens in a new tab.
+            </p>
           </div>
         </div>
       </section>

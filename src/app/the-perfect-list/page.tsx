@@ -243,12 +243,18 @@ export default function GroceryGuidePage() {
               Ever wonder why the grocery stores seem to be filled with bad-for-you food? Or why, even if you go in for 1 item, you can never leave without less than 10? What ever happened to the good old days of knowledgeable butchers and mountains of fresh produce? Don't the stores want you to make healthy choices? This guide answers all those questions, and so much more! Join us as we uncover all of the tricks, traps, and truths of retail psychology, and how you can use that knowledge to become a better, healthier shopper!
             </p>
             <div className={styles.heroCta}>
-              <a href="/the-perfect-list/waitlist" className="btn btn-primary lg">
-                Get the Guide - $47
+              <a
+                href="https://checkout.mailerlite.com/checkout/32176"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary lg"
+              >
+                Get the Guide — $47
+                <i className="ph ph-arrow-square-out" />
               </a>
               <span className={styles.guarantee}>
                 <i className="ph ph-shield-check" />
-                Instant Download
+                Instant Download &nbsp;·&nbsp; Opens in a new tab.
               </span>
             </div>
           </div>
@@ -379,13 +385,19 @@ export default function GroceryGuidePage() {
               $47 <small>Instant Download</small>
             </div>
             <div style={{ marginTop: "26px" }}>
-              <a href="/the-perfect-list/waitlist" className="btn btn-primary lg">
+              <a
+                href="https://checkout.mailerlite.com/checkout/32176"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary lg"
+              >
                 Get The Perfect Grocery List
+                <i className="ph ph-arrow-square-out" />
               </a>
             </div>
             <p className="fineprint" style={{ justifyContent: "center" }}>
               <i className="ph ph-files" />
-              instant PDF download
+              Instant PDF download &nbsp;·&nbsp; Opens in a new tab.
             </p>
           </div>
         </div>

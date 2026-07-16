@@ -213,12 +213,18 @@ export default function EatRealGuidePage() {
               
             </p>
             <div className={styles.heroCta}>
-              <a href="#buy" className="btn btn-primary lg">
+              <a
+                href="https://checkout.mailerlite.com/checkout/32175"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary lg"
+              >
                 Get the Guide — $17
+                <i className="ph ph-arrow-square-out" />
               </a>
               <span className={styles.guarantee}>
                 <i className="ph ph-watch" />
-                Instant download. Start reading today.
+                Instant download. Start reading today. &nbsp;·&nbsp; Opens in a new tab.
               </span>
             </div>
           </div>
@@ -353,13 +359,19 @@ export default function EatRealGuidePage() {
               $17 <small>One-time · yours forever</small>
             </div>
             <div style={{ marginTop: "26px" }}>
-              <a href="#" className="btn btn-primary lg">
+              <a
+                href="https://checkout.mailerlite.com/checkout/32175"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary lg"
+              >
                 Get Eat Real, Live Better
+                <i className="ph ph-arrow-square-out" />
               </a>
             </div>
             <p className="fineprint" style={{ justifyContent: "center" }}>
               <i className="ph ph-files" />
-              Instant digital download
+              Instant digital download &nbsp;·&nbsp; Opens in a new tab.
             </p>
             <p className="fineprint" style={{ justifyContent: "center", marginTop: 8 }}>
               <i className="ph ph-prohibit" />
