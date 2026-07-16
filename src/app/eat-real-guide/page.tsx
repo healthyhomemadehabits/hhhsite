@@ -12,7 +12,7 @@ const productSchema = {
   "@type": "Product",
   name: "Eat Real, Live Better",
   description:
-    "A practical PDF guide to reading grocery labels, identifying Ultra Processed Foods, and building sustainable 80/20 eating habits — without giving up the foods you love.",
+    "A practical PDF guide to reading grocery labels, identifying Ultra Processed Foods, and building sustainable 80/20 eating habits - without giving up the foods you love.",
   url: "https://www.healthyhomemadehabits.com/eat-real-guide",
   brand: { "@type": "Organization", name: "Healthy Homemade Habits" },
   author: [
@@ -45,7 +45,7 @@ const faqSchema = {
       name: "Do I have to give up my favorite foods?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No! The 80/20 method is built so that for 20% of the week, you can relax and enjoy less-than-healthy foods without guilt. Life is about balance — if you mostly eat fresh, nutrient-rich foods, a little fun treat won't erase all that good work.",
+        text: "No! The 80/20 method is built so that for 20% of the week, you can relax and enjoy less-than-healthy foods without guilt. Life is about balance - if you mostly eat fresh, nutrient-rich foods, a little fun treat won't erase all that good work.",
       },
     },
     {
@@ -53,7 +53,7 @@ const faqSchema = {
       name: "I've never dieted before. Is the 80/20 method for me?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! The 80/20 method is for anyone who wants to ease into eating healthier and sustainably keep eating healthier throughout life. Because the method is flexible, you choose the foods you eat — with the understanding that 80% of the time you're making healthy choices and 20% of the time you're choosing to indulge a bit.",
+        text: "Yes! The 80/20 method is for anyone who wants to ease into eating healthier and sustainably keep eating healthier throughout life. Because the method is flexible, you choose the foods you eat - with the understanding that 80% of the time you're making healthy choices and 20% of the time you're choosing to indulge a bit.",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Eat Real, Live Better — $17 Guide to Cutting Ultra Processed Foods",
+  title: "Eat Real, Live Better - $17 Guide to Cutting Ultra Processed Foods",
   description:
     "A practical PDF guide to reading grocery labels, identifying Ultra Processed Foods, and building 80/20 eating habits without giving up the foods you love. $17 instant download.",
   keywords: [
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     "real food swaps",
   ],
   openGraph: {
-    title: "Eat Real, Live Better — $17 | Healthy Homemade Habits",
+    title: "Eat Real, Live Better - $17 | Healthy Homemade Habits",
     description:
       "Learn to identify Ultra Processed Foods, read any ingredient label in seconds, and start the 80/20 real-food lifestyle. Instant PDF download, $17.",
     url: "https://www.healthyhomemadehabits.com/eat-real-guide",
@@ -111,7 +111,7 @@ const features = [
     accent: "a-blush",
     title: "The UPF Red Flag List",
     description:
-      "The exact ingredients that signal ultra-processed — no chemistry degree required. Spot them fast, skip them confidently.",
+      "The exact ingredients that signal ultra-processed - no chemistry degree required. Spot them fast, skip them confidently.",
   },
   {
     icon: "ph-storefront",
@@ -125,7 +125,7 @@ const features = [
     accent: "a-sage",
     title: "Real Food Swaps",
     description:
-      "The easiest swaps for the most common UPFs in your kitchen — practical, affordable, and zero deprivation.",
+      "The easiest swaps for the most common UPFs in your kitchen - practical, affordable, and zero deprivation.",
   },
   {
     icon: "ph-brain",
@@ -139,7 +139,7 @@ const features = [
     accent: "a-blush",
     title: "The 80/20 Mindset",
     description:
-      "The real-food lifestyle that doesn't demand perfection. Make better choices most of the time — and enjoy the rest.",
+      "The real-food lifestyle that doesn't demand perfection. Make better choices most of the time - and enjoy the rest.",
   },
 ];
 
@@ -207,10 +207,10 @@ export default function EatRealGuidePage() {
             <span className="eyebrow">Eat Real, Live Better</span>
             <h1>Stop Eating Ultra Processed Food (Without Giving Up Everything You Love)</h1>
             <p className={styles.sub}>
-              We all want to eat healthier and live longer, right, but restrictive diets and total lifestyle overhauls leave us sad, hungry, and craving the exact foods we know we shouldn&apos;t eat. We&apos;ve cracked the code on traditional diets, and want to share with you a new kind of diet: a diet of balance and joy.
+              We all want to eat healthier and live longer, right, but restrictive diets and total lifestyle overhauls leave us sad, hungry, and craving the exact foods we know we shouldn&apos;t eat. We&apos;ve cracked the code on traditional diets, and want to share with you a new kind of diet: one that's easy to start and easier to maintain.
             </p>
             <p className={styles.sub}>
-              
+              In this guide, we show you how you can enjoy the foods you love, while still maintaining a healthy, non-Ultra Processed diet. Sound too good to be true? Try it for yourself and see how easy it is!
             </p>
             <div className={styles.heroCta}>
               <a
@@ -219,7 +219,7 @@ export default function EatRealGuidePage() {
                 rel="noopener noreferrer"
                 className="btn btn-primary lg"
               >
-                Get the Guide — $17
+                Get the Guide - $17
                 <i className="ph ph-arrow-square-out" />
               </a>
               <span className={styles.guarantee}>
@@ -271,7 +271,7 @@ export default function EatRealGuidePage() {
         <div className="wrap">
           <div className="head-center">
             <span className="eyebrow">What&apos;s inside</span>
-            <h2>Everything you need to eat real — starting this week</h2>
+            <h2>Everything you need to eat real - starting this week</h2>
             <p className="lead">
               Six focused sections that turn confusion into clarity, one
               grocery trip at a time.
@@ -299,7 +299,7 @@ export default function EatRealGuidePage() {
               No more guessing. No more guilt. No more being played.
             </span>{" "}
             You scan a label in seconds, recognize the red flags, and make a
-            confident choice — not because you memorized a list, but because you
+            confident choice - not because you memorized a list, but because you
             actually understand what real food is. That knowledge doesn&apos;t go
             away. It changes every grocery trip, every meal, for the rest of
             your life.

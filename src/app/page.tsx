@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import EmailCaptureForm from "@/components/EmailCaptureForm";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import heroImg from "../../public/images/main_home_lifestyle.jpeg";
 import fssImg from "../../public/images/web_mockups/Main Page TFSS.png";
@@ -48,14 +47,14 @@ const beliefs = [
     accent: "a-sky",
     title: "Balance is everything!",
     description:
-      "We've been on the 80/20 diet for the last 6 years, and we feel great! 80% of the time, we eat fresh and wholesome foods. 20% of the time, we're more relaxed and indulge a little. Balance through a less restrictive diet results in sustainable success.",
+      "We've been on the 80/20 diet for the last 6 years, and we feel great! 80% of the time, we eat fresh and wholesome foods. 20% of the time, we're more relaxed and indulge a little. Less restrictive diets result in long-term success.",
   },
   {
     icon: "ph-shopping-cart-simple",
     accent: "a-blush",
     title: "Healthy eating starts at the grocery store!",
     description:
-      "You can't run before you learn to walk, and the same goes with eating healthy. Before you cook, you need to organize and plan your grocery shop. With our Perfect Grocery List, we make it easy to plan your meals and efficiently move through the grocery store.",
+      "You can't run before you learn to walk, and the same goes with eating healthy. Before you cook, you need to organize and plan your grocery shop. With our Perfect Grocery List, we make it easy to plan your meals and move more efficiently through the store.",
   },
 ];
 
@@ -81,7 +80,7 @@ const eatRealFeatures = [
   },
   {
     icon: "ph-hand-heart",
-    label: "Learn new recipes",
+    label: "Find new recipes",
     description: "We've included some of our favorite healthy recipes from across the internet, so you can start cooking healthy today!",
   },
 ];
@@ -110,8 +109,8 @@ const groceryFeatures: {
     label: "Templates and instructions for The Perfect Grocery List",
     bullets: [
       "+ 4 beautifully simple, blank grocery lists",
-      "+ Blank weekly breakfast, lunch, and dinner menus to help you plan your meals ahead of time",
-      "+ How to think in price-per ounce so you can easily choose the best value products and save money!",
+      "+ 4 Blank weekly breakfast, lunch, and dinner menus to help you plan your meals ahead of time",
+      "+ Built-for-you system to plan meals so you can easily choose the best value products and save money!",
     ],
   },
   {
@@ -136,7 +135,7 @@ const groceryFeatures: {
     label: "14 of our favorite recipes",
     description: "get started with healthy cooking and eating this week!",
     bullets: [
-      { prefix: "+ ", bold: "BONUS: ", text: "A done for you grocery list, containing all the ingredients you'll need from these recipes, so you can try this system out right away!" },
+      { prefix: "+ ", bold: "BONUS: ", text: "A done for you grocery list and menu for a week, containing all the ingredients you'll need from these recipes, so you can try this system out right away!" },
     ],
   },
   {
@@ -183,7 +182,7 @@ export default function Home() {
             </p>
             <div className={styles.heroCta}>
               <Link href="/free-guide" className="btn btn-primary">
-                Get the Free Guide
+                Get the Free Guide!
               </Link>
               <Link href="/eat-real-guide" className="btn btn-primary">
                 Eat Real, Live Better
@@ -263,12 +262,20 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <span className="eyebrow">Free resource - The Five Second Shopper</span>
+              <span className="eyebrow">Free PDF</span>
               <h2>Want to cut out Ultra Processed Foods, but don&apos;t know where to start? Let us help you!</h2>
               <p>
                 We&apos;ve made an easy to read list of all the common Ultra Processed Ingredients you&apos;ll encounter, so you can easily identify them in your favorite grocery store foods. They&apos;re organized alphabetically, so they&apos;re easy to locate, and color coded so you can quickly scan for “Fine to Eat”, “Eat in Moderation”, and “Best to Avoid”. Plus, we included our go-to formula for deciding whether or not a product is worth it to consume. Best of all, it&apos;s completely free!
               </p>
-              <EmailCaptureForm buttonLabel="Send Me the Guide" />
+              <a
+                href="https://checkout.mailerlite.com/checkout/32173"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                Send me the free guide
+                <i className="ph ph-arrow-square-out" />
+              </a>
               <p className="fineprint">
                 <i className="ph ph-lock-simple" />
                 <small>When you download The 5-Second Shopper, you&apos;re agreeing to signing up for our email list. We email once a week, with no obligation to purchase anything. Unsubscribe at any time.</small>
@@ -296,6 +303,7 @@ export default function Home() {
             <span className="eyebrow">Eat Real, Live Better</span>
             <h2>Tired of traditional dieting, and seeing no results? Our approach is different.</h2>
             <p className={styles.lead}>
+              "To eat or not to eat, that is the (UPF) question."
               Now that you know what common Ultra Processed ingredients are lurking in your favorite foods, are you ready to take the next step in cutting them out of your diet? If it sounds daunting, we make it easy for you! <span><b>Eat Real, Live Better: How to Begin Eating Real Food Without Giving Up Everything You Love </b></span>goes more in depth on why Ultra Processed Foods exist, why the grocery stores push them, and how to safeguard yourself against them with the 80/20 eating method. If you&apos;ve been wanting to eat healthier but need a little extra guidance, look no further than this PDF!
             </p>
             <div className={styles.featureList}>
@@ -314,7 +322,7 @@ export default function Home() {
               <span className={styles.was}>Take the first step to healthy eating!</span>
             </div>
             <Link href="/eat-real-guide" className="btn btn-primary">
-              Get the Guide
+              Buy Eat Real, Live Better
             </Link>
             <p className="fineprint">
               <i className="ph ph-watch" />
@@ -451,10 +459,9 @@ export default function Home() {
             <p className="lead" style={{ margin: "22px 0 36px" }}>
               Download The 5-Second Shopper to start your healthy habits today!
             </p>
-            <EmailCaptureForm
-              buttonLabel="Send the Free Guide"
-              className={styles.captureCenter}
-            />
+            <Link href="/free-guide" className="btn btn-primary">
+              Get the Free Guide!
+            </Link>
           </div>
         </div>
       </section>

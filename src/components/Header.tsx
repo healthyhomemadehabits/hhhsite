@@ -15,7 +15,8 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = rawPathname?.replace(/\/$/, "") ?? "";
   const [menuOpen, setMenuOpen] = useState(false);
   const isPerfectList = pathname === "/the-perfect-list";
   const isEatRealGuide = pathname === "/eat-real-guide";
@@ -35,16 +36,16 @@ export default function Header() {
         </Link>
         <div className={styles.navRight}>
           {isPerfectList ? (
-            <a href="#buy" className="btn btn-primary">
-              Get the Guide — $37
+            <a target="_blank" href="https://checkout.mailerlite.com/checkout/32176" className="btn btn-primary">
+              Buy The Perfect Grocery List - $47
             </a>
           ) : isEatRealGuide ? (
-            <a href="#buy" className="btn btn-primary">
-              Get the Guide — $17
+            <a target="_blank" href="https://checkout.mailerlite.com/checkout/32175" className="btn btn-primary">
+              Buy Eat Real, Live Better - $17
             </a>
           ) : (
-            <Link href="/free-guide" className="btn btn-primary">
-              Get the Free Guide
+            <Link target="_blank" href="https://checkout.mailerlite.com/checkout/32173" className="btn btn-primary">
+              Get the Free Guide!
             </Link>
           )}
         </div>
