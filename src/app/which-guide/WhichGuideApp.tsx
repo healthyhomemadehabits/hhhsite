@@ -2,28 +2,25 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
-import EmailCaptureForm from "@/components/EmailCaptureForm";
-import cartImg from "../../../public/images/shopping_cart.jpg";
-import Tag from "@/components/Tag";
-import styles from "./quiz.module.css";
+import Link from "next/link";
+import styles from "./which-guide.module.css";
+import lifestyleImg from "../../../public/images/main_home_lifestyle.jpeg";
 import {
   QUESTIONS,
-  TIERS,
-  score,
-  type Answers,
-  type TierKey,
-  type ScoreResult,
+  getRecommendation,
+  type WhichGuideAnswers,
+  type Recommendation,
 } from "./quiz-data";
 
-const STORE_KEY = "cleanCart.v1";
 const TOTAL_Q = QUESTIONS.length;
+const STORE_KEY = "whichGuide.v1";
 
 type Step = "entry" | "quiz" | "results";
 
 interface SavedState {
   step: Step;
   qIndex: number;
-  answers: Answers;
+  answers: WhichGuideAnswers;
 }
 
 function loadState(): SavedState | null {
@@ -42,7 +39,66 @@ function saveState(s: SavedState) {
   } catch {}
 }
 
+// ---------- product data ----------
+
+const PRODUCTS: Record<
+  Recommendation,
+  {
+    eyebrow: string;
+    headline: string;
+    name: string;
+    price: string;
+    href: string;
+    ctaLabel: string;
+    desc: string;
+    includes: string[];
+    secondaryNote: string;
+    secondaryHref: string;
+    secondaryLabel: string;
+  }
+> = {
+  erlb: {
+    eyebrow: "Start with the foundation",
+    headline: "You need to know what you're actually buying.",
+    name: "Eat Real, Live Better",
+    price: "$17",
+    href: "/eat-real-guide",
+    ctaLabel: "Buy the Guide - $17",
+    desc: "Before you can build a perfect grocery list, you need to know what you're shopping for. Eat Real, Live Better gives you the 80/20 framework - a simple, sustainable rule for identifying real food versus Ultra Processed Food without giving up the things you love.",
+    includes: [
+      "The 80/20 method, explained simply",
+      "Ingredient labels, decoded (plus a full UPF red flag chart)",
+      "The money math: why real food is often cheaper",
+      "A handful of our favorite, easy recipes to get you started!",
+    ],
+    secondaryNote:
+      "Ready to build on this? The Perfect Grocery List is the natural next step once you know what to look for.",
+    secondaryHref: "/the-perfect-list",
+    secondaryLabel: "Learn about The Perfect Grocery List →",
+  },
+  pgl: {
+    eyebrow: "You're ready for a system",
+    headline: "You need a shopping system that actually works.",
+    name: "The Perfect Grocery List",
+    price: "$47",
+    href: "/the-perfect-list",
+    ctaLabel: "Get The Perfect Grocery List - $47",
+    desc: "You've got a sense of what you want to eat - what you need is a system that makes it happen. The Perfect Grocery List gives you the templates, meal planners, and retail psychology insights to get in and out of any grocery store with exactly what you need, on budget.",
+    includes: [
+      "4 blank grocery list templates + 4 blank weekly menu planners",
+      "1 pre-filled example menu and matching grocery list",
+      "Retail psychology breakdown (how stores make you overspend)",
+      "14+ healthy recipe recommendations",
+    ],
+    secondaryNote:
+      "Pair it with Eat Real, Live Better for the complete picture - know what to buy AND how to buy it.",
+    secondaryHref: "/eat-real-guide",
+    secondaryLabel: "Learn about Eat Real, Live Better →",
+  },
+};
+
 // ---------- small pieces ----------
+
 function Progress({ index }: { index: number }) {
   const pct = Math.round(((index + 1) / TOTAL_Q) * 100);
   return (
@@ -87,39 +143,38 @@ function OptionCard({
 }
 
 // ---------- screens ----------
+
 function Entry({ onStart }: { onStart: () => void }) {
   return (
     <div className={styles.entryGrid}>
       <div>
-        <span className="eyebrow">Free 3-minute quiz</span>
+        <span className="eyebrow">Free 2-minute quiz</span>
         <h1 className={styles.entryH1}>
-          Find out how much you’re{" "}
-          <span className="accent">overspending</span> at the grocery store
+          Not sure which guide is{" "}
+          <span className="accent">right for you?</span>
         </h1>
         <p className={styles.entrySub}>
-          Answer 8 quick questions and we’ll show you exactly where your
-          grocery money is going - and how much you could save.
+          Answer 7 quick questions and we&apos;ll point you toward the guide
+          that actually fits your situation.
         </p>
         <div className={styles.entryCta}>
           <button type="button" className="btn btn-primary lg" onClick={onStart}>
-            Take the Free Quiz <i className="ph ph-arrow-right" />
+            Find My Guide <i className="ph ph-arrow-right" />
           </button>
         </div>
         <p className="fineprint">
           <i className="ph ph-clock" />
-          Takes under 3 minutes. No signup required to start.
+          Takes under 2 minutes. See your result instantly.
         </p>
       </div>
       <div className={styles.entryMedia}>
-        <div className={styles.cartCover}>
-          <Image
-            src={cartImg}
-            alt="Cart full of fresh groceries"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        </div>
+        <Image
+          src={lifestyleImg}
+          alt="Healthy home cooking lifestyle"
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+        />
       </div>
     </div>
   );
@@ -133,7 +188,7 @@ function QuizScreen({
   onBack,
 }: {
   index: number;
-  answers: Answers;
+  answers: WhichGuideAnswers;
   onAnswer: (index: number, val: number) => void;
   onNext: () => void;
   onBack: () => void;
@@ -152,7 +207,7 @@ function QuizScreen({
             <OptionCard
               key={i}
               idx={i}
-              text={opt}
+              text={opt.text}
               selected={selected === i}
               onSelect={() => onAnswer(index, i)}
             />
@@ -169,7 +224,7 @@ function QuizScreen({
         </button>
         {hasSel ? (
           <button type="button" className="btn btn-primary" onClick={onNext}>
-            {index === TOTAL_Q - 1 ? "See My Results" : "Next"}{" "}
+            {index === TOTAL_Q - 1 ? "See My Result" : "Next"}{" "}
             <i className="ph ph-arrow-right" />
           </button>
         ) : (
@@ -180,126 +235,66 @@ function QuizScreen({
   );
 }
 
-const TIER_KEYS: TierKey[] = ["low", "medium", "high"];
-
-function Results({
-  result,
-  tierOverride,
-  onTierPreview,
-}: {
-  result: ScoreResult;
-  tierOverride: TierKey | null;
-  onTierPreview: (tier: TierKey) => void;
-}) {
-  const [waitlistDone, setWaitlistDone] = useState(false);
-  const tierKey = tierOverride || result.tier;
-  const tier = TIERS[tierKey];
-  const bridge = tier.bridge(result.monthlyRange.text, result.annualRange.text);
+function Results({ answers }: { answers: WhichGuideAnswers }) {
+  const rec = getRecommendation(answers);
+  const product = PRODUCTS[rec];
+  const cardClass = rec === "erlb" ? styles.erlbCard : styles.pglCard;
 
   return (
     <div>
-      <span className="eyebrow">Your Clean Cart Report</span>
-      <h1 className={styles.resultsH1}>{tier.headline}</h1>
+      <span className="eyebrow">Your recommended guide</span>
+      <h1 className={styles.resultsH1}>{product.headline}</h1>
 
-      {/* ----- stat card ----- */}
-      <div className={styles.statcard}>
-        <div className={styles.statGrid}>
-          <div className={styles.statBlock}>
-            <span className={styles.statCap}>Estimated monthly overspend</span>
-            <span className={styles.statBig}>{result.monthlyRange.text}</span>
-          </div>
-          <div className={styles.statBlock}>
-            <span className={styles.statCap}>Estimated annual overspend</span>
-            <span className={styles.statBig}>{result.annualRange.text}</span>
-          </div>
-        </div>
-        <div className={styles.opp}>
-          <span className={styles.oppLabel}>Your biggest opportunity areas</span>
-          <div className={styles.oppTags}>
-            {result.areaLabels.map((a, i) => (
-              <Tag key={i}>{a}</Tag>
-            ))}
-          </div>
-        </div>
-      </div>
+      <div className={`${styles.resultCard} ${cardClass}`}>
+        <span className={styles.cardEyebrow}>{product.eyebrow}</span>
+        <h2 className={styles.productName}>{product.name}</h2>
+        <p className={styles.productDesc}>{product.desc}</p>
 
-      {/* ----- bridge ----- */}
-      <p className={styles.bridge}>{bridge}</p>
-
-      {/* ----- consultation waitlist ----- */}
-      <div className={styles.waitlist}>
-        <span className="eyebrow">Coming soon</span>
-        <h2 className={styles.waitlistH2}>
-          The Clean Cart Consultation is on its way.
-        </h2>
-        <p className={styles.waitlistDesc}>
-          We're building a 1-on-1 session where Hana and Timm walk through
-          your answers with you, build a personalized grocery list for your
-          household, and set you up with a 2-week meal plan that actually fits
-          your life. Drop your email below and you'll be the first to know when
-          spots open — and first in line for our founding member rate.
-        </p>
-        {!waitlistDone ? (
-          <EmailCaptureForm
-            placeholder="your@email.com"
-            buttonLabel="Join the Waitlist"
-            group="waitlist"
-            onSuccess={() => setWaitlistDone(true)}
-          />
-        ) : (
-          <p className={styles.waitlistConfirm}>
-            <i className="ph ph-check-circle" /> You're on the list! We'll be
-            in touch when spots open.
-          </p>
-        )}
-        <a className={styles.secondaryLink} href="/the-perfect-list">
-          Not ready to wait? Start with our Grocery Guide instead →
-        </a>
-      </div>
-
-      <p className={styles.source}>
-        Baseline grocery costs based on USDA moderate food plan data via{" "}
-        <a href="https://groceriestracker.com" target="_blank" rel="noopener">
-          groceriestracker.com
-        </a>
-        .
-      </p>
-
-      {/* ----- demo tier preview ----- */}
-      <div className={styles.tierPreview}>
-        <span className={styles.tierPreviewLabel}>Demo - preview result tier</span>
-        <div className={styles.tierBtns}>
-          {TIER_KEYS.map((t) => (
-            <button
-              key={t}
-              type="button"
-              className={`${styles.tierBtn} ${tierKey === t ? styles.tierBtnOn : ""}`}
-              onClick={() => onTierPreview(t)}
-            >
-              {t}
-            </button>
+        <span className={styles.includesLabel}>What&apos;s inside</span>
+        <ul className={styles.includesList}>
+          {product.includes.map((item, i) => (
+            <li key={i} className={styles.includesItem}>
+              <i className="ph ph-check" />
+              {item}
+            </li>
           ))}
+        </ul>
+
+        <div className={styles.cardFoot}>
+          <div className={styles.priceWrap}>
+            <span className={styles.price}>{product.price}</span>
+            <span className={styles.priceSub}>
+              one-time &middot; instant PDF download
+            </span>
+          </div>
+          <Link href={product.href} className="btn btn-primary lg">
+            {product.ctaLabel} <i className="ph ph-arrow-right" />
+          </Link>
         </div>
       </div>
+
+      <p className={styles.secondaryNote}>
+        {product.secondaryNote}{" "}
+        <Link href={product.secondaryHref}>{product.secondaryLabel}</Link>
+      </p>
     </div>
   );
 }
 
 // ---------- app shell ----------
-export default function QuizApp() {
+
+export default function WhichGuideApp() {
   const [step, setStep] = useState<Step>("entry");
   const [qIndex, setQIndex] = useState(0);
-  const [answers, setAnswers] = useState<Answers>(() => new Array(TOTAL_Q).fill(null));
-  const [tierOverride, setTierOverride] = useState<TierKey | null>(null);
+  const [answers, setAnswers] = useState<WhichGuideAnswers>(() =>
+    new Array(TOTAL_Q).fill(null)
+  );
   const [hydrated, setHydrated] = useState(false);
 
-  // load any saved progress after mount (avoids SSR/client hydration mismatch)
   useEffect(() => {
     const saved = loadState();
     if (saved) {
-      const validSteps: Step[] = ["entry", "quiz", "results"];
-      const restoredStep = saved.step as string;
-      setStep(validSteps.includes(restoredStep as Step) ? (restoredStep as Step) : "entry");
+      setStep(saved.step ?? "entry");
       setQIndex(saved.qIndex ?? 0);
       setAnswers(saved.answers ?? new Array(TOTAL_Q).fill(null));
     }
@@ -311,12 +306,9 @@ export default function QuizApp() {
     saveState({ step, qIndex, answers });
   }, [hydrated, step, qIndex, answers]);
 
-  // scroll to top of page on screen change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [step, qIndex]);
-
-  const result = score(answers);
 
   function answer(i: number, val: number) {
     const next = answers.slice();
@@ -334,7 +326,6 @@ export default function QuizApp() {
   function startOver() {
     setAnswers(new Array(TOTAL_Q).fill(null));
     setQIndex(0);
-    setTierOverride(null);
     setStep("entry");
   }
 
@@ -359,19 +350,13 @@ export default function QuizApp() {
       />
     );
   } else {
-    screen = (
-      <Results
-        result={result}
-        tierOverride={tierOverride}
-        onTierPreview={setTierOverride}
-      />
-    );
+    screen = <Results answers={answers} />;
   }
 
   return (
     <section className={styles.stage}>
       <div
-        className={`${styles.stageInner} ${step === "results" ? styles.wide : ""}`}
+        className={styles.stageInner}
         key={`${step}-${step === "quiz" ? qIndex : ""}`}
       >
         {step !== "entry" && (

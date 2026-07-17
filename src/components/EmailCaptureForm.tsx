@@ -6,6 +6,7 @@ interface EmailCaptureFormProps {
   buttonLabel: string;
   placeholder?: string;
   className?: string;
+  group?: string;
   /** Called after submission completes. If provided, the form skips its own success/error UI. */
   onSuccess?: (email: string) => void;
 }
@@ -16,6 +17,7 @@ export default function EmailCaptureForm({
   buttonLabel,
   placeholder = "Enter your email",
   className,
+  group,
   onSuccess,
 }: EmailCaptureFormProps) {
   const [email, setEmail] = useState("");
@@ -31,7 +33,7 @@ export default function EmailCaptureForm({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, ...(group ? { group } : {}) }),
       });
       const data = await res.json();
 

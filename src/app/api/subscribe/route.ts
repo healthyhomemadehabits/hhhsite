@@ -1,8 +1,10 @@
 export async function POST(request: Request) {
   let email: string;
+  let groupParam: string;
   try {
     const body = await request.json();
     email = typeof body?.email === "string" ? body.email.trim() : "";
+    groupParam = typeof body?.group === "string" ? body.group : "";
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }
@@ -15,12 +17,16 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.MAILERLITE_API_KEY;
-  const groupId = process.env.MAILERLITE_FREEBIE_GROUP_ID;
+  const freebieGroupId = process.env.MAILERLITE_FREEBIE_GROUP_ID;
+  const waitlistGroupId = process.env.MAILERLITE_CONSULTATION_WAITLIST_GROUP_ID;
 
-  if (!apiKey || !groupId) {
+  if (!apiKey || !freebieGroupId) {
     console.error("Missing MAILERLITE_API_KEY or MAILERLITE_FREEBIE_GROUP_ID");
     return Response.json({ error: "Server configuration error." }, { status: 500 });
   }
+
+  const resolvedGroupId =
+    groupParam === "waitlist" && waitlistGroupId ? waitlistGroupId : freebieGroupId;
 
   try {
     const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
@@ -30,7 +36,7 @@ export async function POST(request: Request) {
         Accept: "application/json",
         Authorization: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({ email, groups: [groupId] }),
+      body: JSON.stringify({ email, groups: [resolvedGroupId] }),
     });
 
     if (!res.ok) {

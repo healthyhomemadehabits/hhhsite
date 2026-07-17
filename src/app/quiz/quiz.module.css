@@ -247,6 +247,41 @@
 .softTitle { font-family: var(--display); font-size: 27px; line-height: 1.1; color: var(--ink); transition: color .2s ease; }
 .softArrow { color: var(--forest); font-size: 20px; margin-top: 8px; transition: color .2s ease; }
 
+/* ---------- waitlist callout ---------- */
+.waitlist {
+  background: var(--forest-light);
+  border: 1px solid var(--forest);
+  border-left: 4px solid var(--forest);
+  padding: clamp(32px, 4vw, 52px);
+  margin-top: 44px;
+}
+.waitlistH2 {
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.12;
+  margin-top: 14px;
+  max-width: 560px;
+}
+.waitlistDesc {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 18px 0 28px;
+  max-width: 620px;
+}
+.waitlistConfirm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 20px;
+}
+.waitlistConfirm i {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .entryGrid { grid-template-columns: 1fr; gap: 40px; }
