@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ComingSoonPage from "@/components/ComingSoonPage";
 
 export const metadata: Metadata = {
-  title: "The Perfect Grocery List — Coming Soon | Healthy Homemade Habits",
+  title: "The Perfect Grocery List - Coming Soon | Healthy Homemade Habits",
   description:
     "The Perfect Grocery List is almost here. Join the waitlist to be the first to know when it drops.",
 };

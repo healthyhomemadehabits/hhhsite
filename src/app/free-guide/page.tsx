@@ -23,7 +23,7 @@ const freeGuideSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "The 5-Second Shopper — Free UPF Ingredient Guide",
+  title: "The 5-Second Shopper - Free UPF Ingredient Guide",
   description:
     "Free downloadable guide listing 125+ Ultra Processed Food ingredients, color-coded by severity (fine, moderate, avoid), plus our simple 5-second formula for evaluating any packaged food at the grocery store.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "packaged food evaluation",
   ],
   openGraph: {
-    title: "The 5-Second Shopper — Free UPF Ingredient Guide | Healthy Homemade Habits",
+    title: "The 5-Second Shopper - Free UPF Ingredient Guide | Healthy Homemade Habits",
     description:
       "Free guide: 125+ Ultra Processed Food ingredients listed alphabetically, color-coded by severity. Includes our simple 5-second formula for evaluating packaged foods at the grocery store.",
     url: "https://www.healthyhomemadehabits.com/free-guide",
@@ -144,7 +144,7 @@ export default function FreeGuidePage() {
               <div className={styles.productCover}>
                 <Image
                   src={tpglImg}
-                  alt="The 5-Second Shopper — free guide product mockup"
+                  alt="The 5-Second Shopper - free guide product mockup"
                   fill
                   style={{ objectFit: "cover" }}
                   priority
@@ -224,7 +224,7 @@ export default function FreeGuidePage() {
             <span className="eyebrow">Ready to stop eating UPFs?</span>
             <h2>Grab your free copy of &ldquo;The 5-Second Shopper!&rdquo;</h2>
             <p>
-              Click below to grab your free copy — it&apos;s instant!
+              Click below to grab your free copy - it&apos;s instant!
             </p>
             <a
               href="https://checkout.mailerlite.com/checkout/32173"
@@ -236,7 +236,8 @@ export default function FreeGuidePage() {
               <i className="ph ph-arrow-square-out" />
             </a>
             <p className="fineprint" style={{ justifyContent: "center" }}>
-              Opens in a new tab.
+              <i className="ph ph-files" />
+              Instant digital download &nbsp;·&nbsp; Opens in a new tab.
             </p>
           </div>
         </div>

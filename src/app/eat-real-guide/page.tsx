@@ -100,46 +100,46 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: "ph-magnifying-glass",
-    accent: "a-forest",
-    title: "Label Reading in Plain English",
-    description:
-      "Decode any nutrition label in under 60 seconds. Know what the numbers mean, what to ignore, and what's a red flag.",
-  },
-  {
-    icon: "ph-prohibit",
-    accent: "a-blush",
-    title: "The UPF Red Flag List",
-    description:
-      "The exact ingredients that signal ultra-processed - no chemistry degree required. Spot them fast, skip them confidently.",
-  },
-  {
-    icon: "ph-storefront",
-    accent: "a-sky",
-    title: "Aisle-by-Aisle Navigation",
-    description:
-      "Where the real food actually lives, which aisles to treat with caution, and how stores use layout to nudge your cart.",
-  },
-  {
-    icon: "ph-swap",
-    accent: "a-sage",
-    title: "Real Food Swaps",
-    description:
-      "The easiest swaps for the most common UPFs in your kitchen - practical, affordable, and zero deprivation.",
-  },
-  {
-    icon: "ph-brain",
-    accent: "a-forest",
-    title: "Why Ultra-Processed Food Hooks You",
-    description:
-      "Understanding the science behind cravings makes cutting UPFs feel like a choice, not a fight. Knowledge is the edge.",
-  },
-  {
     icon: "ph-scales",
-    accent: "a-blush",
-    title: "The 80/20 Mindset",
+    accent: "a-forest",
+    title: "The 80/20 Method, Explained Simply",
     description:
-      "The real-food lifestyle that doesn't demand perfection. Make better choices most of the time - and enjoy the rest.",
+      "A realistic way to balance eating real foods, without giving up everything you love!",
+  },
+  {
+    icon: "ph-list-magnifying-glass",
+    accent: "a-blush",
+    title: "Ingredients Labels, Decoded",
+    description:
+      "Knowing which foods to avoid becomes easy when you learn how to read labels. We teach you how to easily detect an Ultra Processed Food.",
+  },
+  {
+    icon: "ph-clipboard-text",
+    accent: "a-sky",
+    title: "Two Big UPF Ingredient Charts",
+    description:
+      "Every ingredient Whole Foods bans, plus the surprising ones they still allow, with what each is used for and where it hides. Print them, save them, shop with them.",
+  },
+  {
+    icon: "ph-piggy-bank",
+    accent: "a-sage",
+    title: "The Money Math",
+    description:
+      "Side-by-side cost breakdowns show how cooking real food at home costs less than buying prepackaged, plus tips on pantry staples and frozen vegetables that stretch your grocery budget even further.",
+  },
+  {
+    icon: "ph-cooking-pot",
+    accent: "a-forest",
+    title: "Why Real Food Tastes Better",
+    description:
+      "The science of Sensory Specific Satiety explains why a bag of chips gets boring halfway through, and why whole foods keep your taste buds interested bite after bite.",
+  },
+  {
+    icon: "ph-list-checks",
+    accent: "a-blush",
+    title: "What to Actually Eat",
+    description:
+      "A printable list of foods to focus on, foods to buy sparingly, and treats to save for your 20%, organized by category so meal planning gets easier every week.",
   },
 ];
 
@@ -151,7 +151,7 @@ const painPoints = [
   },
   {
     icon: "ph-list-magnifying-glass",
-    title: "Demistify ingredient labels",
+    title: "Demystify ingredient labels",
     text: "What actually IS an Ultra Processed Food, and what are the easiest ways to spot them? Learn how to read an ingredients label like a pro! Understand the financial advantage of from-scratch cooking over convenience cooking.",
   },
   {
@@ -219,7 +219,7 @@ export default function EatRealGuidePage() {
                 rel="noopener noreferrer"
                 className="btn btn-primary lg"
               >
-                Get the Guide - $17
+                Buy Eat Real, Live Better - $17
                 <i className="ph ph-arrow-square-out" />
               </a>
               <span className={styles.guarantee}>
@@ -271,10 +271,9 @@ export default function EatRealGuidePage() {
         <div className="wrap">
           <div className="head-center">
             <span className="eyebrow">What&apos;s inside</span>
-            <h2>Everything you need to eat real - starting this week</h2>
+            <h2>Everything you need to start eating real this week</h2>
             <p className="lead">
-              Six focused sections that turn confusion into clarity, one
-              grocery trip at a time.
+              We show you how easy healthy eating can be!
             </p>
           </div>
           <div className="kgrid cols-3">
@@ -293,16 +292,12 @@ export default function EatRealGuidePage() {
       <section className="section line">
         <div className={`wrap ${styles.inner}`}>
           <span className="eyebrow">Life after the guide</span>
-          <h2>Imagine picking up any package and knowing exactly what&apos;s in it</h2>
+          <h2>Imagine picking up any package and knowing exactly what&apos;s in it at a glance</h2>
           <p>
             <span className={styles.leadLine}>
-              No more guessing. No more guilt. No more being played.
+              Make the right choice, every time!
             </span>{" "}
-            You scan a label in seconds, recognize the red flags, and make a
-            confident choice - not because you memorized a list, but because you
-            actually understand what real food is. That knowledge doesn&apos;t go
-            away. It changes every grocery trip, every meal, for the rest of
-            your life.
+            You scan a label in seconds, recognize the red flags, and make a confident choice because you actually understand what real food is. Eat Real, Live Better helps you lose weight, save money, and feel healthier every day, one meal at a time!
           </p>
         </div>
       </section>
@@ -327,7 +322,7 @@ export default function EatRealGuidePage() {
               We&apos;re Hana &amp; Timm, lovers of fresh salads, perfectly seared steaks (cast iron, not grilled!), gooey homemade brownies, and strong black coffee. In 2020, we made the switch away from Ultra Processed Foods, and our lives changed for the better in so many ways! If you&apos;ve been working to eat healthier, but need a bit of guidance, we&apos;re the un-fussy foodie friends you&apos;ve been looking for! 
             </p>
             <p>
-              This guide is what we wish we&apos;d had on day one. It&apos;s a collection of all the things we learned the long way!
+              This guide is what we wish we&apos;d had years ago! It&apos;s a collection of all the things we've learned along the way!
             </p>
             <p className={styles.sig}>Hana &amp; Timm</p>
           </div>
@@ -368,15 +363,22 @@ export default function EatRealGuidePage() {
                 <i className="ph ph-arrow-square-out" />
               </a>
             </div>
-            <p className="fineprint" style={{ justifyContent: "center" }}>
-              <i className="ph ph-files" />
-              Instant digital download &nbsp;·&nbsp; Opens in a new tab.
-            </p>
-            <p className="fineprint" style={{ justifyContent: "center", marginTop: 8 }}>
-              <i className="ph ph-prohibit" />
-              All sales of downloadable PDFs are final. No refunds, returns, or exchanges once the file is accessed.{" "}
-              <a href="/refund-policy" style={{ color: "var(--forest)", textDecoration: "underline" }}>Refund Policy</a>
-            </p>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: 8 }}>
+              <div>
+                <p className="fineprint">
+                  <i className="ph ph-files" />
+                  Instant digital download &nbsp;·&nbsp; Opens in a new tab.
+                </p>
+                <p className="fineprint" style={{ marginTop: 8 }}>
+                  <i className="ph ph-prohibit" />
+                  <span style={{ textAlign: "left" }}>
+                    All sales of downloadable PDFs are final.<br />
+                    No refunds, returns, or exchanges once the file is accessed.<br />
+                    <a href="/refund-policy" style={{ color: "var(--forest)", textDecoration: "underline" }}>Refund Policy</a>
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

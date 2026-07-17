@@ -91,7 +91,7 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "The Perfect Grocery List — Smarter, Healthier Shopping System ($47)",
+  title: "The Perfect Grocery List - Smarter, Healthier Shopping System ($47)",
   description:
     "A 5-chapter grocery shopping guide with list templates, meal planners, retail psychology secrets, UPF identification tips, and 14 healthy recipes. Stop dreading the grocery store. $47 instant PDF download.",
   keywords: [
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     "smarter grocery shopping PDF",
   ],
   openGraph: {
-    title: "The Perfect Grocery List — $47 | Healthy Homemade Habits",
+    title: "The Perfect Grocery List - $47 | Healthy Homemade Habits",
     description:
       "Stop dreading the grocery store. A complete shopping system with list templates, meal planners, retail psychology tips, UPF guides, and 14 healthy recipes. $47 instant download.",
     url: "https://www.healthyhomemadehabits.com/the-perfect-list",
@@ -119,7 +119,7 @@ const features = [
     accent: "a-forest",
     title: "Crafting your ideal 80/20 diet plan",
     description:
-      "Make an eating plan that works for you, your schedule, and your personal goals, while still enjoying your favorite foods.",
+      "Make an eating plan that works for you, your schedule, and your personal goals, while still enjoying your favorite foods!",
   },
   {
     icon: "ph-prohibit",
@@ -131,7 +131,7 @@ const features = [
   {
     icon: "ph-storefront",
     accent: "a-sky",
-    title: "Implementing The Perfect List in real time, at a real grocery store",
+    title: "Using The Perfect List, in real time, at the grocery store",
     description:
       "Master ingredient label reading, decoding UPFs, and recognizing the red flags, so you can shop quickly, efficiently, and healthfully every single trip.",
   },
@@ -147,7 +147,7 @@ const features = [
     accent: "a-forest",
     title: "Finding delicious, healthy, and fun recipes across the internet",
     description:
-      "We give you a full week of our favorite recipes and recipe sources, so you can start eating healthy right away! We even pre-filled a list with the relevant ingredients!",
+      "We give you a full week of our favorite recipes and recipe sources, so you can start eating healthy right away! We even pre-filled a list with all the needed ingredients!",
   },
   {
     icon: "ph-scales",
@@ -180,7 +180,7 @@ const faqItems = [
   {
     question: "How is this different than buying a grocery list template on Etsy?",
     answer:
-      "The Perfect Grocery List isn't just a grocery list template, but a simple system for getting you organized before you get to the store. Many shopping list templates overcomplicate things by including superfluous charts and trackers that have nothing to do with grocery shopping. The Perfect Grocery List is simple and straightforward, but effective, because it was designed by practical shoppers who hate to faff around.",
+      "The Perfect Grocery List isn't just a grocery list template, but a simple system for getting you organized before you get to the store! Many shopping list templates overcomplicate things by including superfluous charts and trackers that have nothing to do with grocery shopping. The Perfect Grocery List is simple and straightforward, but effective, because it was designed by practical shoppers who hate to faff around.",
   },
   {
     question: "Is it just templates?",
@@ -249,7 +249,7 @@ export default function GroceryGuidePage() {
                 rel="noopener noreferrer"
                 className="btn btn-primary lg"
               >
-                Get the Guide — $47
+                Buy The Perfect Grocery List - $47
                 <i className="ph ph-arrow-square-out" />
               </a>
               <span className={styles.guarantee}>
@@ -326,9 +326,9 @@ export default function GroceryGuidePage() {
           <h2>Wouldn't it be great to just get in and out of the store without stressing, and actually leave with everything you need?</h2>
           <p>
             <span className={styles.leadLine}>
-              Now it's possible with The Perfect Grocery List
+              Now it's possible with The Perfect Grocery List!
             </span>{" "}
-            This simple system has been the only thing we&apos;ve used for the last 6 years, and we&apos;d never dream of going back to the old way! Shop quickly, shop with focus, and never forget an item again.
+            This simple system has been the only thing we&apos;ve used for the last 6 years, and we&apos;d never dream of going back to the old way! Shop quickly, shop with focus, and never forget an item again!
           </p>
         </div>
       </section>
@@ -351,10 +351,6 @@ export default function GroceryGuidePage() {
             <h2>We learned this the hard way so you don&apos;t have to.</h2>
             <p>
               We&apos;re Hana and Timm, a couple of starry eyed grocery shoppers, supermarket tourists, and GGG stockist wannabes. (IYKYK) We&apos;ve studied the Grocery Store in search of a simpler way to shop, and we&apos;ve cracked the code! If you&apos;ve ever wished someone could just do your grocery shopping for you, try The Perfect Grocery List! It&apos;s the next best thing!
-            </p>
-            <p>
-              This guide is all of it, organized and done-for-you. Everything
-              we wish we&apos;d had on day one.
             </p>
             <p className={styles.sig}>Hana &amp; Timm</p>
           </div>
@@ -395,10 +391,22 @@ export default function GroceryGuidePage() {
                 <i className="ph ph-arrow-square-out" />
               </a>
             </div>
-            <p className="fineprint" style={{ justifyContent: "center" }}>
-              <i className="ph ph-files" />
-              Instant PDF download &nbsp;·&nbsp; Opens in a new tab.
-            </p>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: 8 }}>
+              <div>
+                <p className="fineprint">
+                  <i className="ph ph-files" />
+                  Instant PDF download &nbsp;·&nbsp; Opens in a new tab.
+                </p>
+                <p className="fineprint" style={{ marginTop: 8 }}>
+                  <i className="ph ph-prohibit" />
+                  <span style={{ textAlign: "left" }}>
+                    All sales of downloadable PDFs are final.<br />
+                    No refunds, returns, or exchanges once the file is accessed.<br />
+                    <a href="/refund-policy" style={{ color: "var(--forest)", textDecoration: "underline" }}>Refund Policy</a>
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

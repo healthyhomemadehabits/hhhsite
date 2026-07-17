@@ -101,7 +101,7 @@ function Entry({ onStart }: { onStart: () => void }) {
         </h1>
         <p className={styles.entrySub}>
           Answer 8 quick questions and we’ll show you exactly where your
-          grocery money is going — and how much you could save.
+          grocery money is going - and how much you could save.
         </p>
         <div className={styles.entryCta}>
           <button type="button" className="btn btn-primary lg" onClick={onStart}>
@@ -202,7 +202,7 @@ function EmailGate({ onSubmit }: { onSubmit: (email: string) => void }) {
       </div>
       <p className={`fineprint ${styles.centerFine}`}>
         <i className="ph ph-gift" />
-        We’ll also send you our free guide — Eat Real, Live Better — as a
+        We’ll also send you our free guide - Eat Real, Live Better - as a
         gift.
       </p>
     </div>
@@ -213,22 +213,22 @@ const FEATURES = [
   {
     icon: "ph-clipboard-text",
     b: "A custom questionnaire review",
-    t: "— we read every answer you just gave and build around it.",
+    t: "- we read every answer you just gave and build around it.",
   },
   {
     icon: "ph-list-checks",
     b: "Your personalized clean grocery list",
-    t: "— real food that fits how your household actually eats.",
+    t: "-  real food that fits how your household actually eats.",
   },
   {
     icon: "ph-calendar-check",
     b: "A 2-week meal plan built for your household",
-    t: "— sized to your people, your budget, your week.",
+    t: "- sized to your people, your budget, your week.",
   },
   {
     icon: "ph-users-three",
     b: "1:1 guidance from Hana and Timm",
-    t: "— the two of us, walking it through with you.",
+    t: "- the two of us, walking it through with you.",
   },
 ];
 
@@ -344,7 +344,7 @@ function Results({
 
       {/* ----- demo tier preview ----- */}
       <div className={styles.tierPreview}>
-        <span className={styles.tierPreviewLabel}>Demo — preview result tier</span>
+        <span className={styles.tierPreviewLabel}>Demo - preview result tier</span>
         <div className={styles.tierBtns}>
           {TIER_KEYS.map((t) => (
             <button
@@ -377,12 +377,12 @@ function Confirm({
         variant="rose"
         icon="ph-envelope-open"
         aspect="16/7"
-        label="warm photo — Hana & Timm at the kitchen counter"
+        label="warm photo - Hana & Timm at the kitchen counter"
       />
       <span className={styles.checkmark} style={{ marginTop: "40px" }}>
         <i className="ph ph-check-circle" />
       </span>
-      <h1 className={styles.emailH1}>You’re all set — check your inbox.</h1>
+      <h1 className={styles.emailH1}>You’re all set - check your inbox.</h1>
       <p className={styles.emailSub}>
         We just sent your Clean Cart Report plus your free copy of Eat Real,
         Live Better to <b>{email || "your inbox"}</b>.

@@ -47,7 +47,7 @@ export default function Footer() {
             Read Refund Policy
           </Link>
         </p>
-        © Healthy Homemade Habits — Hana &amp; Timm
+        © Healthy Homemade Habits - Hana &amp; Timm
       </div>
     </footer>
   );
