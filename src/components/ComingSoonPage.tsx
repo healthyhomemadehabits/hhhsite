@@ -10,6 +10,7 @@ interface ComingSoonPageProps {
   icon?: string;
   eyebrow?: string;
   buttonLabel?: string;
+  group?: string;
 }
 
 export default function ComingSoonPage({
@@ -19,6 +20,7 @@ export default function ComingSoonPage({
   icon = "ph-package",
   eyebrow = "Coming Soon",
   buttonLabel = "Join the Waitlist",
+  group,
 }: ComingSoonPageProps) {
   return (
     <section className={styles.page}>
@@ -31,7 +33,7 @@ export default function ComingSoonPage({
         <p className={styles.product}>{productName}</p>
         <p className={styles.description}>{description}</p>
         <div className={styles.formWrap}>
-          <EmailCaptureForm buttonLabel={buttonLabel} placeholder="Your email address" />
+          <EmailCaptureForm buttonLabel={buttonLabel} placeholder="Your email address" group={group} />
         </div>
         <p className="fineprint">
           <i className="ph ph-lock-simple" />

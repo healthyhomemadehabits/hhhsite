@@ -28,11 +28,12 @@ export default function Footer() {
             <Link href="/free-guide">The 5-Second Shopper</Link>
             <Link href="/eat-real-guide">Eat Real, Live Better</Link>
             <Link href="/the-perfect-list">The Perfect Grocery List</Link>
+            <Link href="/consultations">Consultations</Link>
             <Link href="/about">About</Link>
           </div>
         </nav>
         <div className={styles.footSocial}>
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/healthyhomemadehabits/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <i className="ph ph-instagram-logo" />
           </a>
           <a href="https://www.youtube.com/@healthyhomemadehabits" aria-label="YouTube" target="_blank" rel="noopener noreferrer">

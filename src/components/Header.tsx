@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/free-guide", label: "5-Second Shopper" },
   { href: "/eat-real-guide", label: "Eat Real, Live Better" },
   { href: "/the-perfect-list", label: "The Perfect List" },
+  { href: "/consultations", label: "Consultations" },
   { href: "/about", label: "About" },
 ];
 

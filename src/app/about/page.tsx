@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const socials = [
   { icon: "ph-envelope-simple", label: "Email", href: "mailto:hello@healthyhomemadehabits.com" },
   { icon: "ph-youtube-logo", label: "YouTube", href: "https://www.youtube.com/@healthyhomemadehabits" },
-  { icon: "ph-instagram-logo", label: "Instagram", href: "#" },
+  { icon: "ph-instagram-logo", label: "Instagram", href: "https://www.instagram.com/healthyhomemadehabits/" },
   { icon: "ph-x-logo", label: "X", href: "#" },
   // { icon: "ph-tiktok-logo", label: "TikTok", href: "#" },
 ];
