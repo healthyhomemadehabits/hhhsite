@@ -88,11 +88,12 @@
 /* ============ RESPONSIVE ============ */
 @media (max-width: 920px) {
   .heroGrid, .bioGrid { grid-template-columns: 1fr; gap: 48px; }
-  .heroMedia { order: -1; max-width: 330px; margin: 0 auto; }
+  .heroMedia { order: -1; width: 100%; max-width: 330px; margin: 0 auto; }
   .painCols { grid-template-columns: 1fr; row-gap: 36px; }
 }
 
 @media (max-width: 680px) {
-  .heroGrid { padding: 56px 0 64px; }
+  .heroGrid { padding: 56px 24px 64px; }
   .heroCta { flex-direction: column; align-items: stretch; }
+  .productCover, .coupleCover { border-width: 3px; }
 }

@@ -17,6 +17,7 @@ export default function ConsultationsPage() {
       icon="ph-users"
       buttonLabel="Join the Waitlist"
       group="waitlist"
+      collectFirstName
     />
   );
 }

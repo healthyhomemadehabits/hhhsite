@@ -1,10 +1,12 @@
 export async function POST(request: Request) {
   let email: string;
   let groupParam: string;
+  let firstName: string;
   try {
     const body = await request.json();
     email = typeof body?.email === "string" ? body.email.trim() : "";
     groupParam = typeof body?.group === "string" ? body.group : "";
+    firstName = typeof body?.firstName === "string" ? body.firstName.trim() : "";
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }
@@ -36,7 +38,11 @@ export async function POST(request: Request) {
         Accept: "application/json",
         Authorization: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({ email, groups: [resolvedGroupId] }),
+      body: JSON.stringify({
+          email,
+          groups: [resolvedGroupId],
+          ...(firstName ? { fields: { name: firstName } } : {}),
+        }),
     });
 
     if (!res.ok) {

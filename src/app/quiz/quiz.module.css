@@ -285,11 +285,16 @@
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .entryGrid { grid-template-columns: 1fr; gap: 40px; }
-  .entryMedia { order: -1; max-width: 360px; }
+  .entryMedia { order: -1; width: 100%; max-width: 360px; margin: 0 auto; }
   .statGrid { grid-template-columns: 1fr; gap: 28px; }
   .confirmCards { grid-template-columns: 1fr; }
   .offerFoot { flex-direction: column; align-items: stretch; }
   .btnApricot { justify-content: center; }
+}
+@media (max-width: 680px) {
+  .cartCover { border-width: 3px; }
+  .statcard { padding: 28px 24px; }
+  .offer { padding: 28px 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .stageInner, .quizBody, .opt { animation: none !important; }

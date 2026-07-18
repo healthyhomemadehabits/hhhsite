@@ -34,6 +34,11 @@
   align-items: center;
 }
 
+/* Mobile CTA — hidden on desktop, shown in sub-nav row on mobile */
+.mobileCta {
+  display: none;
+}
+
 /* Sub-navigation bar */
 .subNav {
   border-top: 1px solid var(--line);
@@ -117,11 +122,39 @@
   color: var(--forest);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
+  .navRight { display: none; }
   .navLinks { display: none; }
-  .menuBtn { display: flex; align-items: center; justify-content: center; }
+  .brand { font-size: 19px; }
+  .mobileCta {
+    display: flex;
+    align-items: center;
+  }
+  .mobileCta :global(.btn) {
+    font-size: 11px;
+    padding: 10px 16px;
+    letter-spacing: .12em;
+  }
+  .subNavInner {
+    justify-content: space-between;
+    height: auto;
+    min-height: 52px;
+    padding: 8px 0;
+  }
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
 }
 
-@media (min-width: 681px) {
+@media (min-width: 769px) {
   .mobileMenu { display: none; }
+}
+
+@media (max-width: 390px) {
+  .brand { font-size: 16px; gap: 8px; }
+  .nav :global(.wrap) { padding: 0 16px; }
 }

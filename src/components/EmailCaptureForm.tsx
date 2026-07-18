@@ -7,6 +7,7 @@ interface EmailCaptureFormProps {
   placeholder?: string;
   className?: string;
   group?: string;
+  collectFirstName?: boolean;
   /** Called after submission completes. If provided, the form skips its own success/error UI. */
   onSuccess?: (email: string) => void;
 }
@@ -18,9 +19,11 @@ export default function EmailCaptureForm({
   placeholder = "Enter your email",
   className,
   group,
+  collectFirstName = false,
   onSuccess,
 }: EmailCaptureFormProps) {
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -33,7 +36,11 @@ export default function EmailCaptureForm({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, ...(group ? { group } : {}) }),
+        body: JSON.stringify({
+          email,
+          ...(group ? { group } : {}),
+          ...(collectFirstName && firstName ? { firstName } : {}),
+        }),
       });
       const data = await res.json();
 
@@ -76,6 +83,18 @@ export default function EmailCaptureForm({
         className={["capture", className].filter(Boolean).join(" ")}
         onSubmit={handleSubmit}
       >
+        {collectFirstName && (
+          <input
+            type="text"
+            className="capture-name"
+            placeholder="Your first name"
+            aria-label="First name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+            disabled={status === "loading"}
+          />
+        )}
         <input
           type="email"
           placeholder={placeholder}

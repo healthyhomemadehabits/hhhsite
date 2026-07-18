@@ -11,6 +11,7 @@ interface ComingSoonPageProps {
   eyebrow?: string;
   buttonLabel?: string;
   group?: string;
+  collectFirstName?: boolean;
 }
 
 export default function ComingSoonPage({
@@ -21,6 +22,7 @@ export default function ComingSoonPage({
   eyebrow = "Coming Soon",
   buttonLabel = "Join the Waitlist",
   group,
+  collectFirstName = false,
 }: ComingSoonPageProps) {
   return (
     <section className={styles.page}>
@@ -33,7 +35,7 @@ export default function ComingSoonPage({
         <p className={styles.product}>{productName}</p>
         <p className={styles.description}>{description}</p>
         <div className={styles.formWrap}>
-          <EmailCaptureForm buttonLabel={buttonLabel} placeholder="Your email address" group={group} />
+          <EmailCaptureForm buttonLabel={buttonLabel} placeholder="Your email address" group={group} collectFirstName={collectFirstName} />
         </div>
         <p className="fineprint">
           <i className="ph ph-lock-simple" />

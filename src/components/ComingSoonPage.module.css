@@ -56,5 +56,7 @@
 }
 
 @media (max-width: 680px) {
-  .page { padding: 72px 0; }
+  .page { padding: 56px 0; }
+  .headline { font-size: clamp(28px, 8vw, 38px); }
+  .description { font-size: 17px; margin-bottom: 28px; }
 }

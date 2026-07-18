@@ -91,11 +91,12 @@
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .heroMedia { order: -1; max-width: 320px; }
-  .groceryMedia { max-width: 400px; }
+  .heroMedia { order: -1; width: 100%; max-width: 320px; margin: 0 auto; }
+  .groceryMedia { width: 100%; max-width: 400px; margin: 0 auto; }
 }
 
 @media (max-width: 680px) {
-  .heroGrid { padding: 48px 0 64px; }
-  :global(.frame).contact { padding: 40px; }
+  .heroGrid { padding: 48px 24px 64px; }
+  :global(.frame).contact { padding: 40px 26px; }
+  .heroImgWrap, .groceryImgWrap { border-width: 3px; }
 }

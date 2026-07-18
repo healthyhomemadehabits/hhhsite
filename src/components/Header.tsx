@@ -54,6 +54,21 @@ export default function Header() {
       </div>
       <div className={styles.subNav}>
         <div className={`wrap ${styles.subNavInner}`}>
+          <div className={styles.mobileCta}>
+            {isPerfectList ? (
+              <a target="_blank" href="https://checkout.mailerlite.com/checkout/32176" className="btn btn-primary">
+                Get Guide · $47
+              </a>
+            ) : isEatRealGuide ? (
+              <a target="_blank" href="https://checkout.mailerlite.com/checkout/32175" className="btn btn-primary">
+                Get Guide · $17
+              </a>
+            ) : (
+              <Link target="_blank" href="https://checkout.mailerlite.com/checkout/32173" className="btn btn-primary">
+                Free Guide
+              </Link>
+            )}
+          </div>
           <nav className={styles.navLinks}>
             {navLinks.map((link) => (
               <Link

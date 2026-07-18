@@ -200,9 +200,13 @@
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .entryGrid { grid-template-columns: 1fr; gap: 36px; }
-  .entryMedia { order: -1; max-width: 340px; }
+  .entryMedia { order: -1; width: 100%; max-width: 340px; margin: 0 auto; }
   .cardFoot { flex-direction: column; align-items: stretch; }
   .cardFoot :global(.btn) { text-align: center; justify-content: center; }
+}
+@media (max-width: 680px) {
+  .entryMedia { border-width: 3px; }
+  .resultCard { padding: 28px 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .stageInner, .quizBody, .opt { animation: none !important; }

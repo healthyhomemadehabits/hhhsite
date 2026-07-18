@@ -65,9 +65,10 @@
 /* ============ RESPONSIVE ============ */
 @media (max-width: 920px) {
   .heroGrid, .aboutGrid { grid-template-columns: 1fr; gap: 48px; }
-  .heroMedia { order: -1; max-width: 340px; margin: 0 auto; }
+  .heroMedia { order: -1; width: 100%; max-width: 340px; margin: 0 auto; }
 }
 
 @media (max-width: 680px) {
-  .heroGrid { padding: 56px 0 64px; }
+  .heroGrid { padding: 56px 24px 64px; }
+  .productCover, .coupleCover { border-width: 3px; }
 }
